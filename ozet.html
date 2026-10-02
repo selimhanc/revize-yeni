@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Özellikleri — Avrasya</title>
+<style>
+:root {
+  --bg: #f3f5f8; --card: #fff; --border: #e2e8f0; --text: #1e293b; --muted: #64748b;
+  --primary: #024372; --accent: #ef950e;
+  --pass: #16a34a; --fail: #dc2626; --pending: #d97706;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--primary); }
+
+.topbar { position: sticky; top: 0; z-index: 20; background: var(--primary); color: #fff; padding: 12px 20px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+.topbar .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
+.topbar h1 { font-size: 17px; font-weight: 700; letter-spacing: -.02em; }
+.topbar .sub { font-size: 12px; opacity: .75; }
+.topbar .spacer { flex: 1; }
+.tabs { display: flex; gap: 6px; }
+.tab { font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 99px; text-decoration: none; color: #fff; background: rgba(255,255,255,.15); }
+.tab:hover { background: rgba(255,255,255,.3); }
+.tab.active { background: var(--accent); color: #241a05; }
+
+.container { max-width: 1100px; margin: 20px auto; padding: 0 16px; display: flex; flex-direction: column; gap: 14px; }
+
+/* Kayıt çubuğu */
+.savebar { position: sticky; top: 56px; z-index: 15; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.savebar.dirty { border-color: var(--accent); background: #fffdf6; }
+.savebar .durum { flex: 1; min-width: 160px; font-size: 13px; color: var(--muted); }
+.savebar.dirty .durum { color: #92400e; font-weight: 600; }
+
+.btn { border: none; cursor: pointer; font: inherit; font-weight: 600; border-radius: 8px; padding: 8px 14px; transition: opacity .15s; }
+.btn:hover { opacity: .88; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-accent { background: var(--accent); color: #241a05; }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--accent); color: var(--primary); }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+
+.hero { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+.hero h2 { font-size: 18px; margin-bottom: 6px; }
+.hero p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.hero .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.chip { font-size: 12px; background: var(--bg); border-radius: 99px; padding: 4px 11px; color: var(--muted); white-space: nowrap; }
+.chip.c-var { color: var(--pass); background: #f0fdf4; }
+.chip.c-kismi { color: var(--pending); background: #fffbeb; }
+
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.toolbar input[type=search] { flex: 1; min-width: 200px; padding: 9px 14px; border: 1px solid var(--border); border-radius: 8px; font: inherit; background: var(--card); }
+select.status { font: inherit; font-size: 13px; font-weight: 600; border-radius: 8px; border: 1px solid var(--border); padding: 6px 9px; background: var(--card); }
+
+.group { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.group-head { display: flex; align-items: center; gap: 12px; padding: 14px 18px; cursor: pointer; user-select: none; }
+.group-head:hover { background: #f8fafc; }
+.group-head .caret { transition: transform .2s; color: var(--muted); font-size: 12px; flex-shrink: 0; }
+.group-head.collapsed .caret { transform: rotate(-90deg); }
+.group-head .ico { font-size: 20px; flex-shrink: 0; }
+.group-name { font-weight: 700; font-size: 15px; flex: 1; min-width: 0; }
+.group-sum { font-size: 12.5px; color: var(--muted); font-weight: 400; margin-top: 3px; }
+.group-count { font-size: 12px; color: var(--muted); background: var(--bg); border-radius: 99px; padding: 3px 10px; white-space: nowrap; flex-shrink: 0; }
+.group-body { border-top: 1px solid var(--border); }
+.group-body.hidden { display: none; }
+
+.feat { border-bottom: 1px solid #f1f5f9; }
+.feat:last-child { border-bottom: none; }
+.feat-head { display: flex; align-items: flex-start; gap: 10px; padding: 11px 16px; cursor: pointer; }
+.feat-head:hover { background: #f8fafc; }
+.tick { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.tick.var { background: #dcfce7; color: var(--pass); }
+.tick.kismi { background: #fef3c7; color: var(--pending); }
+.feat-title { font-size: 14px; font-weight: 600; line-height: 1.45; }
+.feat-ne { font-size: 13px; color: var(--muted); line-height: 1.5; margin-top: 3px; }
+.feat-caret { color: var(--muted); font-size: 11px; flex-shrink: 0; margin-top: 4px; transition: transform .2s; }
+.feat.open .feat-caret { transform: rotate(90deg); }
+
+/* Silme düğmesi */
+.del-btn { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 15px; line-height: 1; padding: 4px 7px; border-radius: 6px; flex-shrink: 0; }
+.del-btn:hover { background: #fef2f2; color: var(--fail); }
+
+/* Yorum */
+.yorum-alan { margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 10px; }
+.yorum-baslik { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .04em; }
+.yorum-baslik .btn { margin-left: auto; }
+.yorum-input { width: 100%; min-height: 54px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font: inherit; font-size: 13px; line-height: 1.55; resize: vertical; background: #fffdf6; }
+.yorum-input:focus { outline: 2px solid var(--accent); background: #fff; }
+.yorum-input::placeholder { color: #94a3b8; font-style: italic; }
+.yorum-fs-btn { background: var(--card); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; padding: 5px 7px; }
+.yorum-fs-btn:hover { background: #eef2f7; color: var(--primary); border-color: var(--accent); }
+.yorum-ipu { font-size: 11px; color: var(--muted); margin-top: 5px; display: flex; align-items: center; gap: 6px; }
+.yorum-ipu .nokta { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+/* Tam ekran düzenleyici */
+.fs-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(15,23,42,.96); display: flex; flex-direction: column; }
+.fs-overlay.hidden { display: none !important; }
+.fs-toolbar { display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #fff; flex-wrap: wrap; }
+.fs-toolbar .title { font-size: 13px; opacity: .85; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fs-toolbar .btn { background: rgba(255,255,255,.15); color: #fff; }
+.fs-textarea { flex: 1; margin: 0 16px 16px; padding: 16px; border: none; border-radius: 12px; font: inherit; font-size: 14px; line-height: 1.65; resize: none; background: var(--card); color: var(--text); }
+.fs-textarea:focus { outline: 2px solid var(--accent); }
+
+.empty { text-align: center; color: var(--muted); padding: 30px 10px; font-size: 14px; }
+footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
+footer .hint { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; border-radius: 8px; padding: 8px 12px; display: inline-block; }
+.hidden { display: none !important; }
+
+/* Kilit */
+.login-overlay { position: fixed; inset: 0; z-index: 100; background: rgba(15,23,42,.94); display: flex; align-items: center; justify-content: center; }
+.login-overlay.hidden { display: none !important; }
+.login-box { background: var(--card); border-radius: 14px; padding: 32px 28px; width: min(360px, 90vw); text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+.login-box .icon { font-size: 34px; }
+.login-box h2 { font-size: 18px; margin: 10px 0 4px; }
+.login-box p { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.login-box input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; text-align: center; margin-bottom: 12px; }
+.login-box input:focus { outline: 2px solid var(--accent); }
+.login-box .btn { width: 100%; padding: 10px; background: var(--primary); color: #fff; }
+.login-err { color: var(--fail); font-size: 12px; margin-top: 10px; min-height: 14px; }
+
+@media (max-width: 640px) {
+  .topbar .row { flex-direction: column; align-items: flex-start; }
+  .savebar { top: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="row">
+    <div>
+      <h1>Sistem Özellikleri — Avrasya</h1>
+      <div class="sub" id="topSub">yükleniyor…</div>
+    </div>
+    <span class="spacer"></span>
+    <div class="tabs">
+      <a class="tab active" href="ozellikler.html">Özellikler</a>
+      <a class="tab" href="index.html">Kontrol Listesi</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="savebar" id="savebar">
+    <span class="durum" id="kayitDurum">Değişiklik yok.</span>
+    <button class="btn btn-outline btn-sm" id="btnGeriAl" disabled>↺ Son silmeyi geri al</button>
+    <button class="btn btn-outline btn-sm" id="btnTumunuAc">Tümünü Aç</button>
+    <button class="btn btn-outline btn-sm" id="btnTumunuKapat">Tümünü Kapat</button>
+    <button class="btn btn-accent" id="btnKaydet" disabled>💾 Kaydet (JSON'a yaz)</button>
+  </div>
+
+  <div class="hero">
+    <h2 id="hBaslik">Sistem Özellikleri</h2>
+    <p id="hAciklama"></p>
+    <div class="meta" id="hMeta"></div>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Özellik ara… (örn. slider, form, menü)">
+    <select class="status" id="filtreDurum" title="Duruma göre süz">
+      <option value="">Tüm özellikler</option>
+      <option value="var">✔ Tamamı</option>
+      <option value="kismi">◐ Kısmi</option>
+      <option value="yorumlu">💬 Yorumlu</option>
+    </select>
+    <button class="btn btn-outline" id="btnCollapse">Tümünü Kapat</button>
+    <button class="btn btn-outline" id="btnExpandAll">Tümünü Aç</button>
+  </div>
+
+  <div id="gruplar"></div>
+  <div class="empty" id="bos">Aramaya uyan özellik yok.</div>
+
+  <footer>
+    <div class="hint">Satır başlığına tıklayarak özelliğin nasıl çalıştığını açın. Yorum yazmak için açın, ⛶ ile tam ekran düzenleyin. Silme ve yorum değişiklikleri <b>Kaydet</b> düğmesine basılana kadar kaydedilmez.</div>
+  </footer>
+</div>
+
+<div class="fs-overlay hidden" id="fsOverlay">
+  <div class="fs-toolbar">
+    <span class="title" id="fsTitle"></span>
+    <button class="btn" id="fsClose">Kapat (Esc)</button>
+  </div>
+  <textarea class="fs-textarea" id="fsTextarea" spellcheck="true" placeholder="Yorumunuzu yazın…"></textarea>
+</div>
+
+<script>
+const DATA = {"baslik":"SİSTEM ÖZELLİKLERİ","aciklama":"Avrasya Pro teması ve yönetim panelinin sunduğu özellikler. Her satırda başlık, durum işareti ve işlev açıklaması vardır; açıklama satırına tıklayarak ayrıntıyı görebilirsiniz.","site":"http://185.23.72.228","panel":"http://185.23.72.228/admin","tema":"Avrasya Pro","guncel":"17–18.09.2026 Sürümü","olusturma":"2026-10-02 08:13","kaynak_dosya":"checklist-2026-10-01.json","ozet":{"grup":7,"ozellik":63,"var":59,"kismi":4},"gruplar":[{"ad":"SİTE VE SAYFA MİMARİSİ","ikon":"🏗","ozet":"Sayfaların nasıl kurulduğu: bloklar, modüller, tasarım blokları ve sayfaya özel kod.","ozellikler":[{"baslik":"Blok tabanlı sayfa editörü","durum":"var","ne":"Sayfa içeriği blok blok kurulur. Her bloğun tipi, sırası, açık/kapalı durumu ve kendi ayarları vardır.","nasil":"İçerik Yönetimi → Sayfalar → bir sayfayı düzenleyin. \"İçerik Blokları\" bölümünde satırlar sürüklenerek sıralanır; her satırın yanındaki katlama düğmesiyle blok ayarları açılır. Bir blok kapatıldığında kaydı silinmez, sitede görünmez."},{"baslik":"Modüler bloklar (içerikten beslenen)","durum":"var","ne":"Haber, Proje, Bağış Kategorisi ve Etkinlik listelerini sayfaya otomatik olarak bağlar.","nasil":"Haberler: kategori/etiket süzgeci, en yeni / en eski / rastgele / öne çıkanlar / en çok okunan sıralaması, kaç kayıt geleceği ve ızgara–karusel–liste görünümü. Projeler: etiket, sıralama, adet, ilerleme çubuğu. Bağış Kategorileri: öne çıkanlar / tümü / elle seçilenler / kampanyalar. Etkinlikler: yaklaşanlar / geçmişler / tümü."},{"baslik":"Tasarım blokları (temaya özel görünüm)","durum":"var","ne":"Görünümü temaya ait, içeriği panelden değiştirilebilen hazır bloklar.","nasil":"Şu an hazır olanlar: Bülten Aboneliği, Üçlü Görsel + Metin, Etki Şeridi, Çağrı Bandı, İkonlu Kartlar. Yeni bir tema bloğu eklendiğinde kendiliğinden editörde görünür; tasarımı değiştirmeye gerek yoktur."},{"baslik":"Harita bloğu","durum":"var","ne":"Kayıtlı konumdan veya elle koordinatla harita gösterir; iğne rengi seçilebilir.","nasil":"Google Haritalar birinci tercih, OpenStreetMap ikinci tercih. \"Haritada göster\" bağlantısı seçilen konumu haritalarda açar. OSM alt atıf şeridi lisans gereği kalır."},{"baslik":"Form (kısa kod) bloğu","durum":"var","ne":"Panelde tanımlanan formu istediğiniz sayfaya gömer.","nasil":"İletişim Formu, Bülten Kutusu, Bilgi Talep Formu gibi hazır formlar kısa kodla sayfaya eklenir. Form gönderimi sayfayı yenilemeden yapılır; başarıda formun yerinde bildirim çıkar."},{"baslik":"Zekât / Fitre Hesaplayıcı bloğu","durum":"var","ne":"Hesaplayıcıyı sayfa içine koyar; hesaplanan tutar bağışa dönüşebilir.","nasil":"Hesaplayıcının kendi sayfası da vardır. Blokta başlık, görünüm ve \"sonuçta bağış butonu görünsün mü\" tercihi sayfaya özel değiştirilebilir. Nisab miktarı ve zekât oranı Ayarlar → Hesaplayıcılar bölümünden yönetilir."},{"baslik":"SSS bloğu","durum":"var","ne":"Soruları ortak havuzdan seçer veya etikete göre toplu çeker.","nasil":"Açılışta tüm havuz işaretsiz listelenir; arama büyük/küçük harf ve Türkçe karakter duyarsızdır (%…%). Aramanın altında etiket grupları soru sayılarıyla listelenir; tıklanınca o etiketin soruları gelir. Arama yazma bitince 600 ms sonra tek istekle çalışır, önceki istek iptal edilir."},{"baslik":"Blok kimliği, sınıfı ve CSS/JS","durum":"var","ne":"Her bloğa kendi id/class verilebilir; yalnız o bloğa CSS uygulanabilir.","nasil":"Blok ayarlarında kimlik, ek sınıf ve CSS alanları vardır. Kural gövdesi yazılırsa (background: #f8fafc;) bloğun kendisine uygulanır; seçici yazılırsa (h2 { ... }) o bloğun içiyle sınırlanır. Sayfaya özel CSS herkese, JavaScript yalnız yönetici rollerine açıktır."},{"baslik":"Blok Menüsü (sayfa içi sekmeler)","durum":"var","ne":"Uzun sayfalarda bloklar arasında hızlı geçiş sağlayan kenar çubuğu.","nasil":"Masaüstünde kenar çubuğu, mobilde üstte yatay şerit. Blok başlığına tıklanınca blok en üste değil ekran yüksekliğine göre hesaplanan konuma gelir; kaydırma takibiyle aktif başlık vurgulanır. Hangi blokların gireceği blok bazında seçilir."},{"baslik":"Ana sayfayı bölümlerden kurma","durum":"var","ne":"Anasayfa, panelden düzenlenebilen bir sayfa olarak kurulabilir.","nasil":"Sayfa şablonlarından \"Ana Sayfa (bölümlerden kurulu)\" seçilir. Bu şablonlu aktif bir sayfa varsa sitenin ana sayfası o sayfadan basılır ve Sayfalar bölümünden düzenlenir. Sunucuda \"Örnek Ana Sayfa\" hazırlandı ama PASİF bırakıldı; aktif yapılırsa ana sayfa değişir, pasife alınınca yerleşik ana sayfaya döner."},{"baslik":"Satır-Sütunlu düzen","durum":"kismi","ne":"Blokları 12 birimlik ızgarada yan yana ve alt alta dizer.","nasil":"12 birimlik ızgara: 1×3, 2×2, 8+4 gibi kombinasyonlar. Yeni temada genişlik değişince editör anında güncelleniyor. Açık kalan konu: bir blok satır içinde aşağı kaydırılabiliyor ama sütunlar arasında sürüklenemiyor."}]},{"ad":"BAĞIŞ VE ÖDEME","ikon":"💛","ozet":"Bağış akışının adımları, hisse mantığı, fiyatlandırma ve ödeme yöntemleri.","ozellikler":[{"baslik":"Adım sırası","durum":"var","ne":"Bağış akışında önce tür mü önce bölge mi sorulacağını seçersiniz.","nasil":"Kampanya ekranındaki \"Adım Sırası\" ayarından belirlenir. Kaydı olmayan adım (ör. hiç bölge tanımlanmamışsa) sitede hiç görünmez, numaralandırma kaymaz ve o alan zorunlu tutulmaz."},{"baslik":"Parametrik bağlantı","durum":"var","ne":"Bağış adımları adresten ön seçimle gelir.","nasil":"/tr/kampanyalar/<kampanya>?tur=<tur>&bolge=<bolge> biçiminde bağlantı. Böyle gelindiğinde tüm adımlar açık ve seçimler işaretli gelir. Bağlantı üç yerden üretilebilir: sayfa editöründeki Bağış Bloğu, bağış kategorisi detay sayfasındaki iki seçim kutusu ve elle yazılan adres."},{"baslik":"Hisse mantığı (kurban türleri)","durum":"var","ne":"Hisseli türlerde kimin adına bağış yapıldığını hisse bazında kaydeder.","nasil":"Kişi sayısı serbest; her satırda ad, telefon ve hisse adedi seçilir. Üstteki çubuk \"3 / 7 hisse\" gibi ilerlemeyi ve kalanı gösterir; hisseler tamamlanmadan sonraki adıma geçilemez. Örnek: 1 büyükbaş → Ali 2, Mehmet 3, Ayşe 2. Adet artarsa gereken hisse de katlanır (2 büyükbaş = 14 hisse). Bilgi sepette, bağış kaydında ve paneldeki \"Vekalet Bilgileri\" sekmesinde saklanır."},{"baslik":"Fiyat Matrisi (tür × bölge)","durum":"var","ne":"Fiyatları ülke/bölge bazında ayrı ayrı tanımlar.","nasil":"Kampanyalar → Fiyat Matrisi ekranında tür × bölge tablosunun tamamı tek ekranda güncellenir. Boş bırakılan hücre \"bu bölgede bu tür sunulmuyor\" demektir ve sitede hiç görünmez — silinmez, pasife alınır; tekrar fiyat girilince geri gelir. Kurban Bayramı için her yıl yeni kayıt açmanıza gerek yoktur, mevcut kampanyanın fiyat matrisini güncellemeniz yeterlidir."},{"baslik":"Sepet","durum":"var","ne":"Bağış kalemlerini toplar, adet ve tutarı anında günceller.","nasil":"Sepet ikonu masaüstü ve mobilde adet rozetiyle görünür. Sepette ürün varken masaüstündeki \"Bağış Yap\" düğmesi ve mobil alt çubuk \"Bağışı Tamamla (adet)\" olup sepete gider; sepet boşalınca eski hâline döner. Sepete ekleme sayfayı yenilemeden yapılır, böylece rozetler ve tutar anında güncellenir."},{"baslik":"Hızlı bağış","durum":"var","ne":"Ziyaretçiye tutar seçtirip tek tıkla sepete ekletir.","nasil":"Varsayılan olarak pencere (pop-up) açılır. Sayfa şablonunda ve sayfa özelinde davranış seçilir: Standart → çekmece açılır; Özel → doğrudan /tr/bagis/<kategori>?tur=… adresine gider. Masaüstü ve mobil kutuları ayrı yönetilir, mantıkları aynıdır."},{"baslik":"Havale / EFT ödemesi","durum":"var","ne":"Havale ile ödenen bağışlar banka üzerinden doğrulanır.","nasil":"Havale ile ödenen bağış \"bekliyor\" durumunda açılır; sistem 5 saniye arayla en fazla 12 kez (toplam 1 dakikayı geçmeden) bankaya sorar, havale görüldüğünde ödeme durumu \"tamamlandı\" olur ve banka referansı kaydedilir. Denemeler Otomasyon Logları'na yazılır. Banka entegrasyonu yoksa yönetici/muhasebe rolü \"Havaleyi Onayla\" butonuyla elle onaylayabilir."},{"baslik":"Hesap numaraları","durum":"var","ne":"Havale/EFT hesaplarını banka adı, IBAN, para birimi, logo ve sırayla yönetir.","nasil":"Aktif hesaplar hem sitedeki havale ekranında hem ödeme adımında listelenir. Yönetim → Hesap Numaraları bölümünden girilir."},{"baslik":"Zekât / Fitre hesaplayıcıları","durum":"var","ne":"Zekât ve fitre hesaplayan, sonucu bağışa dönüştürebilen araçlar.","nasil":"Gövdesi ortak bir parçaya taşındı; kendi sayfası ve yeni sayfa bloğu aynı koddan beslenir. Ayarlar → Hesaplayıcılar bölümünden Fitre ayarları, Nisab miktarı ve zekât oranı yönetilir. Hedef bağış kategorisi boş bir kategoriye işaret ediyordu, \"Genel Bağış\" olarak düzeltildi; bağış butonu ancak böyle çalışır."},{"baslik":"Bağış kayıtları salt-okunur","durum":"var","ne":"Bağış kaydının tutarı, bağışçısı ve ödeme bilgisi sonradan değiştirilemez.","nasil":"Muhasebe kaydı olduğu için değiştirme yerine \"Yönetici Notları\" defterine not eklenir. Her not yazar ve zaman damgasıyla saklanır, ilk kayda dokunulmaz. Sağ üstteki \"Kaydet\" düğmesi \"Notu Kaydet\" oldu ve yalnız notu AJAX ile gönderir."},{"baslik":"Ödemeler bölümü kaldırıldı","durum":"var","ne":"Ayrı bir \"Ödemeler\" menüsü artık yok; ödeme bilgisi bağışın kendi sayfasında.","nasil":"Ödeme durumu, sağlayıcı, kanal, IP ve işlem numarası bağışın detay sayfasındaki \"Ödeme\" sekmesinde ve \"Ödeme Hareketleri\" tablosunda tutulur. Kayıtlar korunmuştur."}]},{"ad":"İÇERİK YÖNETİMİ","ikon":"📝","ozet":"Haber, proje, etkinlik, SSS, form ve medya gibi içeriklerin panelden yönetimi.","ozellikler":[{"baslik":"Haber Türleri","durum":"var","ne":"Haber, Duyuru, Kampanya gibi türler artık kodda değil panelde tanımlı.","nasil":"Yeni tür açın, adını her dilde yazın, rozet rengini seçin, sırayı sürükleyerek değiştirin. Yerleşik beş tür kodda adıyla anıldığı için silinemez; kullanımdaki bir tür de silinmez, önce haberleri başka türe taşımanız istenir."},{"baslik":"Haber Kategorileri","durum":"var","ne":"Haberler için bağış kategorilerinden ayrı, kendi içerik kategorileri.","nasil":"Kültürel, Coğrafi, Tarih gibi kategoriler açıp renk verebilir; bir habere birden çok kategori atayabilirsiniz. Haber formunun \"Sınıflandırma\" bölümünden atanır."},{"baslik":"Etiketler","durum":"var","ne":"#kurban, #sukuyusu gibi etiketler tüm içeriklerde kullanılabilir.","nasil":"Etiketin adı her dile çevrilebilir ama anahtarı tüm dillerde tektir. \"Faaliyet Alanı\" işaretli etiketler Faaliyet Alanları sayfasında sekme olur. Habere, projeye, etkinliğe ve bağış kategorisine atanabilir."},{"baslik":"Sık Sorulan Sorular havuzu","durum":"var","ne":"Sorular her sayfada tek tek yazılmak yerine ortak bir havuzda durur.","nasil":"Soruyu bir kez girip etiketlersiniz. Sayfa editöründeki SSS bloğunda soruları tek tek seçebilir, \"Etikete Göre Otomatik Ekle\" ile bir etiketin tüm sorularını çekebilir veya yalnızca o sayfaya özel soru yazabilirsiniz. Aynı soru iki kaynaktan gelirse bir kez gösterilir."},{"baslik":"Formlar","durum":"var","ne":"Tek satırlık bülten kutusu da çok alanlı iletişim formu da buradan tanımlanır.","nasil":"Alan türünü (kısa metin, e-posta, telefon, sayı, uzun metin, açılır liste, onay kutusu, tarih, gizli alan), etiketini, yer tutucusunu, zorunluluğunu ve genişliğini seçersiniz; sırayı sürükleyerek değiştirirsiniz. Gelen gönderimler formun kendi \"Gönderimler\" sekmesinde listelenir."},{"baslik":"Kayıtlı Konumlar","durum":"var","ne":"Harita bloğunun konum defteri; aynı koordinatı her seferinde aramaya gerek kalmaz.","nasil":"Konumun adını ve adresini her dilde yazın, koordinatını girin, etiketleyin (#afganistan, #sukuyusu gibi). Google Haritalar'dan kopyaladığınız \"41.0082, 28.9784\" biçimindeki metni Enlem alanına yapıştırırsanız iki alan birden dolar. \"Haritada Gör\" ile koordinatı doğrulayabilirsiniz."},{"baslik":"Slider Paketleri","durum":"var","ne":"Slider artık tek bir anasayfa bannerı değil, istediğiniz kadar paket.","nasil":"Yıldızlı paket anasayfa bannerıdır; diğer paketler (örn. \"Afganistan Gönüllüleri Su Kuyusu\") sayfa ve haberlerin içine bölüm olarak eklenir. Anasayfa slider'ını değiştirmek için o pakete \"Anasayfa Slider\" yapma aksiyonunu kullanırsınız, diğerinin yıldızı otomatik kalkar."},{"baslik":"Medya Galerisi","durum":"kismi","ne":"Görselleri dosya yükleme ya da YouTube/Instagram/Vimeo bağlantısıyla ekler.","nasil":"Gömülü içerikler galeride önizleme görseliyle listelenir, tıklanınca sayfadan çıkmadan yerinde oynatılır. YouTube Shorts ve Instagram Reels bağlantıları otomatik \"dikey\" işaretlenir ve 9:16'lık ayrı bir \"Kısa Videolar\" şeridinde listelenir. Sayfa ve haber düzenlerken \"Dosya Yükle\" ve \"Galeriden Seç\" iki seçenek sunulur; galeri penceresi 24'erli gruplar hâlinde lazy load eder, ad/etiket/kategori süzgeçleri vardır. Açık kalan konu: panoya yapıştırılan görsel tüm görsellere dönüyor; Ctrl+V ile yükleme bekleniyor."},{"baslik":"Görsel kırpma ve boyutlandırma","durum":"var","ne":"Görselin üzerindeki kalem simgesiyle kırpma, döndürme ve yeniden boyutlandırma.","nasil":"Serbest, 16:9, 4:3, 1:1 ve 3:4 oranları hazır. Özgün dosyaya dokunmadan çalışmak için \"Kopyala ve Düzenle\" aksiyonu eklendi: dosyanın ve kaydın kopyası çıkarılır, etiket/kategori bağları taşınır, orijinal değişmez."},{"baslik":"Görüntülenme sayacı","durum":"var","ne":"Haber ve projelerde kaç kez görüntülendiğini tutar.","nasil":"Modüler bloklardaki \"en çok okunan\" süzgeci bu sayacı kullanır. Sayaç güncellenirken kaydın güncelleme tarihine dokunulmaz."},{"baslik":"Etkinlikler","durum":"var","ne":"Kayıt formu, yorum ve geçmiş etkinlik listesi.","nasil":"Etkinliğe Taslak/Yayında durumu verilir; taslaklar sitede görünmez. Düzenleme ekranında \"Sitede Gör\" butonu vardır. Etkinliğe bağlı bir \"Etkinlik Sonu Yazısı\" oluşturulabilir; liste ve detay sayfaları sitede ayrıdır."},{"baslik":"Hediye Kataloğu","durum":"var","ne":"Bağışa hediye/ paket olarak eklenebilen kalemler.","nasil":"Kalemin adı, görseli, fiyatı ve bağlandığı kampanya düzenlenir. Kaydettikten sonra liste sayfasına dönülür."}]},{"ad":"PANEL KULLANIMI","ikon":"🛠","ozet":"Panelde çalışmayı kolaylaştıran genel davranış değişiklikleri.","ozellikler":[{"baslik":"Panel arama kutusu","durum":"var","ne":"Sağ üstteki arama kutusu artık çalışıyor.","nasil":"22 bölümde aranabilir alan tanımlandı. Yazdığınız kelimeye en yakın kayıtlar ve ilgili panel bölümleri öneriliyor (\"bülten\" yazınca Bülten Aboneleri, \"çeviri\" yazınca Çeviri Yönetimi). Ctrl+K (Mac'te ⌘K) ile de açılır. Türkçe karakter farkı gözetilmez."},{"baslik":"Klonlama","durum":"var","ne":"13 bölümün liste satırında \"Klonla\" aksiyonu var.","nasil":"Klon tüm alanları kopyalar; slug ve anahtar gibi tekil alanların sonuna \"-kopya\" (çakışırsa \"-kopya-2\") eklenir, başlığa \"(kopya)\" gelir, etiket ve kategori bağları taşınır, sayaçlar (toplanan tutar, görüntülenme, yayın tarihi) sıfırlanır. Kopya her zaman taslak olarak açılır. Blok editöründe de satır, sütun ve element kopyalama çalışır."},{"baslik":"Sürükleyerek sıralama","durum":"var","ne":"Sıra numarası taşıyan bölümlerde kayıtları sürükleyerek sıralayabilirsiniz.","nasil":"Hesaplayıcılar, Kampanyalar, Projeler, Vekalet Bilgileri ve Sertifika Atama Kuralları'nda eksik olan sürükleme açıldı. Form içindeki tekrarlanan bloklar (sayfa blokları, sütunlar, form alanları, SSS soruları, footer sütunları) da sürüklenerek sıralanıyor."},{"baslik":"Başlık üstte, slug altta — otomatik","durum":"var","ne":"Adres (slug) alanını elle yazmanız gerekmiyor.","nasil":"URL taşıyan tüm bölümlerde başlık üstte, slug altta. Başlığı yazdıkça slug o dilin kuralına göre kendiliğinden dolar: Türkçe karakterler İngilizce karşılığına (Bağış → bagis), Almanca'da ümlautlar iki harfe (Über → ueber), Arapça'da harfler korunur. Daha önce yayınlanmış kaydın slug'ı kendiliğinden değişmez; elle değiştirirseniz yine de düzgün biçime getirilir."},{"baslik":"Kaydettikten sonra liste sayfasına dönüş","durum":"var","ne":"Kayıt ettikten sonra kendi liste sayfanıza dönersiniz.","nasil":"45 oluşturma/düzenleme ekranında geçerli. Arka arkaya kayıt girerken fazladan tıklama gerekmiyor."},{"baslik":"Sitede Gör butonu","durum":"var","ne":"Kaydın sitedeki hâlini tek tıkla yeni sekmede açarsınız.","nasil":"Sayfa, Haber, Proje, Etkinlik, Bağış Kategorisi ve Kampanya kayıtlarında hem liste satırının en sağında hem düzenleme ekranının sağ üstünde vardır. Kayıt yayında değilse veya o dilde slug'ı yoksa buton gizlenir — kırık bağlantı üretmez."},{"baslik":"Hata mesajları Türkçe","durum":"var","ne":"Doğrulama hataları artık Türkçe.","nasil":"Daha önce \"The starts at field is required.\" gibi İngilizce mesajlar çıkıyordu; artık \"Başlangıç tarihi alanı zorunludur.\" yazıyor. Panel ve sitenin tamamı için geçerli."},{"baslik":"Listeden doğrudan düzenleme","durum":"var","ne":"Başlık ve slug'ı liste satırının içinden yazabilirsiniz.","nasil":"Sayfalar ve Haberler listelerinde başlık ile slug satırın içinden değiştirilir; haberlerde yayın durumu da satırdaki açılır listeden değiştirilir. Bu düzenleme yalnızca panel diline (Türkçe) uygulanır; diğer dillerin çevirileri bozulmaz."},{"baslik":"Çeviri Yönetimi","durum":"var","ne":"Panel ve site metinlerini diller arasında taşır.","nasil":"Çalışan bir çeviri servisi ve yedek sağlayıcı bağlı. HTML içerikte etiketler korunup yalnızca metin çevrilir. \"Toplu çeviri\" butonu ve onay penceresi düzeltildi; \"Yeni Anahtar Ekle\" bölümü eklendi. Tarama düğmesiyle sayfalara eklenen yeni metinler otomatik gelir."},{"baslik":"Çok dilli site","durum":"var","ne":"Türkçe, İngilizce, Arapça ve Almanca.","nasil":"Her kayıt diller sekmesiyle yönetilir. Arapça ve Almanca çevirileri giriilmemişse kayıttaki \"Google ile … diline çevir\" düğmesi tek tıkla üretir."},{"baslik":"Kullanıcı ve yetki yönetimi","durum":"var","ne":"Paneli kimlerin kullanabileceğini ve şifrelerini yönetir.","nasil":"Yazar seçimi yalnızca yönetici ve editörlerden yapılabilir. Şifre sıfırlama linki kullanıcıya gönderilebilir veya rastgele tek kullanımlık şifre üretilip bir kez gösterilebilir. Yetkiler bölümde tanımlıdır (yönetici, editör, muhasebe)."},{"baslik":"Teknik Dokümantasyon","durum":"var","ne":"Her sürümün teknik özeti panelde.","nasil":"Sürüm Notları bölümü listenin en üstünde; bir önceki sürümün notları hemen altında. Kurulum rehberi: docs/AVRASYA-PRO.md"}]},{"ad":"GÖRÜNÜM VE AYARLAR","ikon":"🎨","ozet":"Tema, logo, alt bilgi, analitik ve tema önbelleği gibi ayarlar.","ozellikler":[{"baslik":"Avrasya Pro teması","durum":"var","ne":"Sitenin yeni teması; Tema Yönetimi'nden aktif edilir.","nasil":"Temalar → Avrasya Pro kaydından aktifleştirilir; varsayılan temaya tek tıkla dönülebilir. Tema önbelleği kaydedince temizleniyor, artık panelden yapılan renk/stil değişiklikleri sitede anında yansıyor (önce 1 saat gecikmeyle görünüyordu)."},{"baslik":"Ziyaretçi seçebilir tema","durum":"var","ne":"Ziyaretçi, sitede kullanabileceği temalar arasından seçebilir.","nasil":"Temalarda \"Ziyaretçi Seçebilir\" anahtarı var (hem düzenleme formunda hem liste sütununda). Anahtarı açık iki tema varsa sitede Tercihler penceresi açılır; seçim bir yıl saklanır. Şu an sunucuda bu işaretli tema yok, yani seçici görünmüyor."},{"baslik":"Site Kimliği (logo, favicon)","durum":"var","ne":"Logo ve favicon artık temadan değil, Ayarlar'dan yönetiliyor.","nasil":"Site logosu, koyu zemin logosu ve favicon yüklenir. Header, mobil ve footer için ayrı ayrı \"site logosu / bu bölüme özel logo / logo yok\" seçilir, yükseklik piksel olarak verilir. Yüklerken kırpma ve yeniden boyutlandırma yapılabilir. Ayarlar → Genel ve Site Kimliği sekmesinin başında \"Şu an sitede kullanılan\" önizleme kutusu vardır."},{"baslik":"Düzenlenebilir Footer","durum":"var","ne":"Footer sütunları ve bağlantıları panelden yönetilir.","nasil":"En fazla 4 sütun tanımlanır; her sütun \"bağlantı listesi\", \"iletişim bilgileri\" veya \"serbest metin\" olabilir. Tanıtım metni, sosyal medya simgeleri, bülten şeridi, telif satırı ve alt bağlantılar da buradan. Bağlantılara harici adres (https://…, mailto:, tel:) verilebilir ve yeni sekmede açılır; her bağlantının solunda hazır ikon veya SVG seçilebilir. Hiçbir sütun tanımlamazsanız site eskisi gibi yerleşik footer'ı kullanır."},{"baslik":"Analitik","durum":"var","ne":"Takip kodlarını panelden ekleyip güncelleyebilirsiniz.","nasil":"Ayarlar → Analitik sekmesinde ana anahtar ve kimlikler: Google Analytics 4 (G-…), Google Tag Manager (GTM-…), Meta Pixel, Yandex Metrica. Boş bıraktığınız servis hiç yüklenmez. Çerez onayı verilmeden takip çalışması önerilir (KVKK). Şu an kapalı gelir; kullanacaksanız ana anahtarı açıp kimliği girmeniz gerekiyor."},{"baslik":"Düzenlenebilir üst menü","durum":"var","ne":"Üst menü artık temaya gömülü değil, panelden yönetiliyor.","nasil":"Menü Öğeleri kayıtlarından beslenir; masaüstü ve mobil çekmece menüsü aynı kayıtlardan beslendiği için artık ayrı ayrı güncellenmez. Alt öğesi olan başlık açılır-kapanır bölüm olur; başlığın kendi adresi varsa \"<Başlık> - Tümü\" satırı eklenir. Tümünü gösterme özelliği ana sayfada çalışır."},{"baslik":"Mobil çekmece menüsü","durum":"var","ne":"Mobil menü paneldeki değişikliklere göre güncellenir.","nasil":"Daha önce şablona gömülü sabit bir listeydi; panelden yapılan değişiklikler yalnızca masaüstüne yansıyordu. Artık iki menü de aynı kayıtlardan besleniyor. Alt öğesi olan başlık dokununca açılır-kapanır olur."},{"baslik":"Adres yönlendirme yönetimi","durum":"var","ne":"Rotaları panelden değiştirebilirsiniz.","nasil":"Gelişmiş bağış kategorileri /bagis/<slug> adresinde (eski /kampanyalar/<slug> 301 ile yönlenir). /haberler segmenti değiştirilebilir; eski adres çalışmaya devam eder. Dil seçimi olmayan bağlantılar varsayılan dile (TR) yönlenir."},{"baslik":"Mobil uyum","durum":"var","ne":"Mobil başlık, dokunma hedefleri ve form alanları mobilde kullanılabilir.","nasil":"390 px genişlikte test edildi; header yüksekliği 64 px, dokunma hedefleri 44 px üzeri, form alanları iPhone'un yakınlaştırmasına takılmayacak boyutta. Bağış yapmaya her zaman erişim için hızlı bağış çekmecesi ve alt bar var."}]},{"ad":"ENTEGRASYON VE OTOMASYON","ikon":"🔗","ozet":"Banka, CRM ve otomasyon bağlantıları ile veri aktarımı.","ozellikler":[{"baslik":"Banka entegrasyonu (havale doğrulama)","durum":"kismi","ne":"Havale ödemelerini bankadan otomatik doğrular.","nasil":"Altyapı hazır, bağlantı tanımlanmamış. Ayarlar → Ödeme → Havale/EFT Kontrolü bölümüne banka doğrulama adresi ve erişim anahtarı girilince devreye girer. Girilene kadar bekleyen havale bağışlarında yönetici/muhasebe için \"Havaleyi Onayla\" butonu bulunur; aynı havale kodunu paylaşan sepet bağışları birlikte tamamlanır."},{"baslik":"CRM aktarımı","durum":"var","ne":"Bağışçı profillerini ve bağış kayıtlarını CRM'e aktarır.","nasil":"Ödeme ve Bildirim → CRM Aktarımı bölümünde iki CSV indirilir: \"Bağışçı Profilleri\" (üye ve misafir bağışçılar e-posta üzerinden tekilleştirilerek) ve \"Bağış Kayıtları\". Kişiler external_id, bağışlar contact_external_id alanıyla eşleşir. Dosyalar Excel'de Türkçe karakterleri korur."},{"baslik":"Kurban siparişleri → otomasyon","durum":"kismi","ne":"Kurban siparişlerini otomasyon sistemine bağlar.","nasil":"Entegrasyon Bilgileri sayfasında her kayıt için güvenli anahtar üretilir. Veri artık gönderilmez, otomasyon kendisi çeker. \"Otomasyonun Göreceği Veri\" bölümünde birleştirilmiş açıklama önizlenir: \"Büyükbaş (1/7 hisse) ÷ Afrika ÷ Adak ÷ 2 adet ÷ Vekalet: Ahmet Yılmaz, Ayşe Yılmaz\". Kesim bildirimi POST /api/automation/kurban-status ile alınır ve sipariş durumu panelde salt-okunur güncellenir."},{"baslik":"Bildirim şablonları","durum":"var","ne":"Tek bir şablon birden çok kanala hizmet edebilir.","nasil":"Şablonda kanal işaret kutuları vardır; e-posta, SMS, WhatsApp ve Panel kanalları aynı anda seçilebilir. Konu alanı yalnızca E-posta veya Panel seçiliyken görünür. Gönderimde her kanal için ayrı log kaydı oluşur. Mevcut şablonların kanalları otomatik taşındı."},{"baslik":"Teknik Dokümantasyon","durum":"var","ne":"Sürüm notları ve kurulum rehberi.","nasil":"Sürüm Notları (17.09.2026) bölümü eklendi. Avrasya Pro kurulum rehberi: docs/AVRASYA-PRO.md"}]},{"ad":"ÖRNEK İÇERİK VE TESLİMAT","ikon":"📦","ozet":"Sunucuya kurulmuş örnek içerik ve sürüm bilgisi.","ozellikler":[{"baslik":"Örnek içerik","durum":"var","ne":"Yeni açılan bölümler boş gelmesin diye gerçek hizmetlere göre yazılmış örnek içerik kuruldu.","nasil":"16 SSS sorusu etiketlendi (#bagis 6, #kurban 3, #odeme 2, #zekat 2, #uyelik 2, #sukuyusu 2, ayrıca #iftar, #afganistan, #nepal, #hindistan, #sri-lanka). Üç form: İletişim Formu, Bülten Kutusu, Bilgi Talep Formu. Altı kayıtlı konum: Kabil ve Kandahar, Katmandu, Yeni Delhi, Kolombo, Genel Merkez. \"Örnek Ana Sayfa\" PASİF durumda — site ana sayfası değişmedi. Tamamı Türkçe ve İngilizce."},{"baslik":"Örnek içeriği geri alma","durum":"var","ne":"Kurduğunuz örnek içeriği tek komutla geri alabilirsiniz.","nasil":"php artisan dernek:ornek-icerik komutu tekrar çalıştırılabilir (kopya çıkmaz) ve --temizle seçeneğiyle yalnızca kendi eklediği kayıtları siler; başka hiçbir veriye dokunmaz."},{"baslik":"Sürüm 17–18.09.2026","durum":"var","ne":"Kontrol listesindeki \"ADMİN — EK REVİZE\" başlığı altındaki 17 maddenin tamamı yapıldı, test edildi ve sunucuya alındı.","nasil":"Listedeki 182 maddenin tamamı artık \"geçti\" durumunda. Bu sürümün ağırlığı içerik yönetiminde: sayfalar artık hazır modüllerden ve tasarım bloklarından kuruluyor, medya galerisinden görsel seçilebiliyor, form ve harita gibi eksik modüller eklendi. Test sonuçları: site rotaları 76/78, kimlikli rotalar 41/42 başarılı. Yedekler /root/yedek/ altında alındı; 2 migration çalıştırıldı, hiçbir tablo/sütun silinmedi ve hiçbir kayıt değiştirilmedi."}]}]};
+
+/* ---------- şifreleme ---------- */
+/* ---------- kalıcı çalışma alanı ---------- */
+const LS_ACIK   = 'avrasya-ozellikler-acik';    // açık özellikler
+const LS_YORUM  = 'avrasya-ozellikler-yorum';   // yorumlar
+const LS_SIL    = 'avrasya-ozellikler-sil';     // silinenler
+const LS_GRUP   = 'avrasya-ozellikler-grup';    // kapalı gruplar
+
+const oku = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+const yaz = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+const state = {
+  grupKapanik: oku(LS_GRUP, {}),
+  arama: '', durum: '',
+  silinen: oku(LS_SIL, []),
+  kirli: false,
+  sonSilinen: null
+};
+
+const DURUM = {
+  var:   { tick: '✔', ad: 'Tamam',  cls: 'var' },
+  kismi: { tick: '◐', ad: 'Kısmi', cls: 'kismi' },
+  yok:   { tick: '✖', ad: 'Yok',   cls: 'kismi' }
+};
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function yorumGet(id) { return oku(LS_YORUM, {})[id] || ''; }
+function yorumTum() { return oku(LS_YORUM, {}); }
+function yorumSet(id, deger) {
+  const o = yorumTum();
+  if (deger.trim()) o[id] = deger; else delete o[id];
+  yaz(LS_YORUM, o);
+}
+function acikMi(id) { return oku(LS_ACIK, {})[id] === true; }
+function kaydetAcik(id, d) { const o = oku(LS_ACIK, {}); o[id] = d; yaz(LS_ACIK, o); }
+
+function kirliIsaretle(mesaj) {
+  state.kirli = true;
+  kayitDurumGuncelle(mesaj);
+}
+function kayitDurumGuncelle(mesaj) {
+  const sb = document.getElementById('savebar');
+  const b = document.getElementById('btnKaydet');
+  sb.classList.toggle('dirty', state.kirli);
+  b.disabled = !state.kirli;
+  document.getElementById('btnGeriAl').disabled = !state.sonSilinen;
+  document.getElementById('kayitDurum').textContent = mesaj || (state.kirli
+    ? 'Kaydedilmemiş değişiklikler var — "Kaydet" düğmesine basın.'
+    : 'Değişiklik yok.');
+}
+
+/* ---------- render ---------- */
+function render() {
+  const q = state.arama.trim().toLocaleLowerCase('tr');
+  const kok = document.getElementById('gruplar');
+  kok.innerHTML = '';
+  let bulunan = 0;
+
+  DATA.gruplar.forEach(g => {
+    const silinen = new Set(state.silinen);
+    const yorumlar = yorumTum();
+    const tumu = g.ozellikler.filter(o => !silinen.has(g.ad + '::' + o.baslik));
+
+    const ozellikler = tumu.filter(o => {
+      const id = g.ad + '::' + o.baslik;
+      if (state.durum === 'yorumlu') { if (!yorumlar[id]) return false; }
+      else if (state.durum && o.durum !== state.durum) return false;
+      if (!q) return true;
+      const y = yorumlar[id] || '';
+      return (o.baslik + ' ' + o.ne + ' ' + o.nasil + ' ' + y + ' ' + g.ad).toLocaleLowerCase('tr').includes(q);
+    });
+    if (!ozellikler.length) return;
+    bulunan += ozellikler.length;
+
+    const grupKapanik = state.grupKapanik[g.ad] === true;
+    const kismiSayi = tumu.filter(o => o.durum === 'kismi').length;
+    const yorumSayi = tumu.filter(o => yorumlar[g.ad + '::' + o.baslik]).length;
+
+    const w = document.createElement('div');
+    w.className = 'group';
+
+    const head = document.createElement('div');
+    head.className = 'group-head' + (grupKapanik ? ' collapsed' : '');
+    head.innerHTML = `
+      <span class="caret">▼</span>
+      <span class="ico">${esc(g.ikon)}</span>
+      <div class="group-name">
+        ${esc(g.ad)}
+        <div class="group-sum">${esc(g.ozet)}</div>
+      </div>
+      <span class="group-count">${ozellikler.length}/${tumu.length}${kismiSayi ? ' · ◐ ' + kismiSayi : ''}${yorumSayi ? ' · 💬 ' + yorumSayi : ''}</span>`;
+    head.addEventListener('click', () => {
+      state.grupKapanik[g.ad] = !grupKapanik;
+      yaz(LS_GRUP, state.grupKapanik);
+      render();
+    });
+    w.appendChild(head);
+
+    const body = document.createElement('div');
+    body.className = 'group-body' + (grupKapanik ? ' hidden' : '');
+
+    ozellikler.forEach(o => {
+      const d = DURUM[o.durum] || DURUM.kismi;
+      const id = g.ad + '::' + o.baslik;
+      const yorum = yorumGet(id);
+      const open = acikMi(id) || (!!q && !state.durum);
+
+      const f = document.createElement('div');
+      f.className = 'feat' + (open ? ' open' : '');
+      f.innerHTML = `
+        <div class="feat-head">
+          <span class="tick ${d.cls}" title="${esc(d.ad)}">${esc(d.tick)}</span>
+          <div style="flex:1;min-width:0">
+            <div class="feat-title">${esc(o.baslik)}</div>
+            <div class="feat-ne">${esc(o.ne)}</div>
+          </div>
+          ${yorum ? '<span class="tick" style="background:#eef2f7;color:var(--muted)" title="Yorum yazılmış">💬</span>' : ''}
+          <span class="feat-caret">▶</span>
+          <button class="del-btn" title="Bu özelliği sil">✕</button>
+        </div>
+        <div class="feat-body">
+          <div class="kutu">
+            <div class="satir"><strong>Ne işe yarar:</strong> ${esc(o.ne)}</div>
+            <div class="satir"><strong>Nasıl kullanılır:</strong> ${esc(o.nasil)}</div>
+            <div class="satir"><strong>Durum:</strong> ${esc(d.tick)} ${esc(d.ad)}</div>
+          </div>
+          <div class="yorum-alan">
+            <div class="yorum-basik">
+              <span>Yorumunuz</span>
+              <button class="yorum-fs-btn" title="Tam ekran düzenle">⛶ Tam ekran</button>
+            </div>
+            <textarea class="yorum-input" placeholder="Bu özellik hakkında notunuz, görüşünüz, revizyon talebiniz…">${esc(yorum)}</textarea>
+            <div class="yorum-ipu"><span class="nokta" style="background:${yorum ? 'var(--pass)' : 'var(--muted)'}"></span>${yorum ? 'Yorum kayıtlı (kaydet düğmesiyle JSON\'a yazılır)' : 'Henüz yorum yok'}</div>
+          </div>
+        </div>`;
+
+      const headEl = f.querySelector('.feat-head');
+      headEl.addEventListener('click', e => {
+        if (e.target.closest('.del-btn')) return;
+        f.classList.toggle('open');
+        kaydetAcik(id, f.classList.contains('open'));
+      });
+
+      // yorum alanı: tıklamayı aç/kapa ile karıştırma
+      const ta = f.querySelector('.yorum-input');
+      ta.addEventListener('input', () => {
+        yorumSet(id, ta.value);
+        const nokta = f.querySelector('.yorum-ipu .nokta');
+        const ipu = f.querySelector('.yorum-ipu');
+        if (ta.value.trim()) {
+          nokta.style.background = 'var(--pass)';
+          ipu.innerHTML = '<span class="nokta" style="background:var(--pass)"></span>Yorum kayıtlı (kaydet düğmesiyle JSON\'a yazılır)';
+        } else {
+          nokta.style.background = 'var(--muted)';
+          ipu.innerHTML = '<span class="nokta" style="background:var(--muted)"></span>Henüz yorum yok';
+        }
+        kirliIsaretle();
+      });
+
+      // tam ekran yorum düzenleyici
+      f.querySelector('.yorum-fs-btn').addEventListener('click', () => {
+        fsAc(`${g.ad} — ${o.baslik}`, ta.value, deger => {
+          ta.value = deger;
+          yorumSet(id, deger);
+          ta.dispatchEvent(new Event('input'));
+        });
+      });
+
+      // silme (onaylı)
+      f.querySelector('.del-btn').addEventListener('click', () => {
+        if (!confirm(`"${o.baslik}" özelliği silinsin mi?\n\nBu değişiklik "Kaydet" düğmesine basılana kadar kaydedilmez.`)) return;
+        if (!state.silinen.includes(id)) state.silinen.push(id);
+        yaz(LS_SIL, state.silinen);
+        state.sonSilinen = id;
+        const ac = oku(LS_ACIK, {}); delete ac[id]; yaz(LS_ACIK, ac);
+        kirliIsaretle(`"${o.baslik}" silinmek üzere işaretlendi (kaydedilmedi).`);
+        render();
+      });
+
+      body.appendChild(f);
+    });
+
+    w.appendChild(body);
+    kok.appendChild(w);
+  });
+
+  document.getElementById('bos').classList.toggle('hidden', bulunan > 0);
+
+  const gorunenler = [...kok.querySelectorAll('.group')];
+  const hepsiKapali = gorunenler.length > 0 &&
+    gorunenler.every(x => x.querySelector('.group-body').classList.contains('hidden'));
+  document.getElementById('btnCollapse').textContent = hepsiKapali ? 'Tümünü Aç' : 'Tümünü Kapat';
+  kayitDurumGuncelle();
+}
+
+/* ---------- tam ekran düzenleyici ---------- */
+const fsOverlay = document.getElementById('fsOverlay');
+const fsTextarea = document.getElementById('fsTextarea');
+const fsTitle = document.getElementById('fsTitle');
+let fsCtx = null;
+
+function fsAc(baslik, deger, kaydetFn) {
+  fsCtx = kaydetFn;
+  fsTitle.textContent = 'Yorum — ' + baslik;
+  fsTextarea.value = deger || '';
+  fsOverlay.classList.remove('hidden');
+  fsTextarea.focus();
+  fsTextarea.setSelectionRange(fsTextarea.value.length, fsTextarea.value.length);
+}
+function fsKapat() {
+  if (!fsCtx) return;
+  fsCtx(fsTextarea.value);
+  fsCtx = null;
+  fsOverlay.classList.add('hidden');
+}
+fsTextarea.addEventListener('keydown', e => { if (e.key === 'Escape') { e.preventDefault(); fsKapat(); } });
+document.getElementById('fsClose').addEventListener('click', fsKapat);
+
+/* ---------- JSON'a yaz ---------- */
+function jsonuYaz() {
+  const yorumlar = yorumTum();
+  const silinen = new Set(state.silinen);
+
+  const cikti = JSON.parse(JSON.stringify(DATA));
+  let silinenSayi = 0, yorumluSayi = 0;
+
+  cikti.gruplar.forEach(g => {
+    g.ozellikler = g.ozellikler.filter(o => {
+      const id = g.ad + '::' + o.baslik;
+      if (silinen.has(id)) { silinenSayi++; return false; }
+      return true;
+    });
+    g.ozellikler.forEach(o => {
+      const id = g.ad + '::' + o.baslik;
+      const y = yorumlar[id];
+      if (y && y.trim()) { o.yorum = y; yorumluSayi++; } else { delete o.yorum; }
+    });
+    // silinen her şey yazıldıysa grup da düşer
+    if (!g.ozellikler.length) g.bos = true;
+  });
+  cikti.gruplar = cikti.gruplar.filter(g => !g.bos);
+
+  const oz = { grup: cikti.gruplar.length, ozellik: cikti.gruplar.reduce((a, g) => a + g.ozellikler.length, 0) };
+  oz.var = cikti.gruplar.reduce((a, g) => a + g.ozellikler.filter(o => o.durum === 'var').length, 0);
+  oz.kismi = cikti.gruplar.reduce((a, g) => a + g.ozellikler.filter(o => o.durum === 'kismi').length, 0);
+  oz.yorumlu = yorumluSayi;
+  cikti.ozet = oz;
+  cikti.guncelleme = new Date().toISOString().slice(0, 16).replace('T', ' ');
+
+  const blob = new Blob([JSON.stringify(cikti, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ozellikler.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  state.kirli = false;
+  state.sonSilinen = null;
+  DATA = cikti;
+  state.silinen = [];
+  yaz(LS_SIL, []);
+  kayitDurumGuncelle(`✓ JSON indirildi — ${silinenSayi} özellik silindi, ${yorumluSayi} yorum yazıldı.`);
+}
+
+/* ---------- düğmeler ---------- */
+document.getElementById('btnKaydet').addEventListener('click', jsonuYaz);
+
+document.getElementById('btnGeriAl').addEventListener('click', () => {
+  if (!state.sonSilinen) return;
+  state.silinen = state.silinen.filter(x => x !== state.sonSilinen);
+  yaz(LS_SIL, state.silinen);
+  state.sonSilinen = null;
+  kirliIsaretle('Son silme geri alındı (kaydedilmedi).');
+  render();
+});
+
+document.getElementById('search').addEventListener('input', e => { state.arama = e.target.value; render(); });
+document.getElementById('filtreDurum').addEventListener('change', e => { state.durum = e.target.value; render(); });
+
+document.getElementById('btnCollapse').addEventListener('click', () => {
+  const gorunenler = [...document.getElementById('gruplar').querySelectorAll('.group')];
+  const hepsiKapali = gorunenler.length > 0 &&
+    gorunenler.every(x => x.querySelector('.group-body').classList.contains('hidden'));
+  DATA.gruplar.forEach(g => state.grupKapanik[g.ad] = !hepsiKapali);
+  yaz(LS_GRUP, state.grupKapanik);
+  render();
+});
+document.getElementById('btnExpandAll').addEventListener('click', () => {
+  state.grupKapanik = {};
+  DATA.gruplar.forEach(g => {
+    g.ozellikler.forEach(o => kaydetAcik(g.ad + '::' + o.baslik, true));
+  });
+  yaz(LS_GRUP, state.grupKapanik);
+  render();
+});
+document.getElementById('btnTumunuAc').addEventListener('click', () => document.getElementById('btnExpandAll').click());
+document.getElementById('btnTumunuKapat').addEventListener('click', () => {
+  DATA.gruplar.forEach(g => state.grupKapanik[g.ad] = true);
+  yaz(LS_GRUP, state.grupKapanik);
+  render();
+});
+
+/* ---------- üst bilgi ---------- */
+function ustBilgi() {
+  document.getElementById('hBaslik').textContent = DATA.baslik;
+  document.getElementById('hAciklama').textContent = DATA.aciklama;
+  document.getElementById('topSub').textContent = DATA.site + ' · ' + DATA.tema;
+  const o = DATA.ozet;
+  const yorumlu = Object.keys(yorumTum()).length;
+  document.getElementById('hMeta').innerHTML =
+    `<span class="chip">${o.grup} konu başlığı</span>` +
+    `<span class="chip">${o.ozellik} özellik</span>` +
+    `<span class="chip c-var">✔ ${o.var} tamam</span>` +
+    `<span class="chip c-kismi">◐ ${o.kismi} kısmi</span>` +
+    (yorumlu ? `<span class="chip">💬 ${yorumlu} yorum</span>` : '') +
+    `<span class="chip">${esc(DATA.guncel)}</span>` +
+    `<span class="chip"><a href="${esc(DATA.panel)}" target="_blank" rel="noopener">Panele git ↗</a></span>`;
+}
+
+function baslat() {
+  ustBilgi();
+  render();
+}
+
+baslat();
+</script>
+</body>
+</html>

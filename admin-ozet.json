@@ -1,0 +1,1160 @@
+{
+  "baslik": "ADMİN PANELİ ÖZETİ",
+  "aciklama": "Admin Panel - Sayfalar ve ADMİN - EK REVİZE maddelerinin birleşik özeti. Yapılan maddeler check edildi; son verilen KONTROL 4 revizeleri her maddenin açıklamasının altında \"---\" ayrımıyla toplandı.",
+  "kaynak_dosya": "checklist-2026-09-30 SELİMHAN-2.json",
+  "olusturma": "2026-10-01 15:39",
+  "ozet": {
+    "toplam": 114,
+    "yapilan": 105,
+    "yapilmayan": 9,
+    "kontrol4_iceren": 6
+  },
+  "kategoriler": [
+    {
+      "id": "admin-ozet",
+      "name": "ADMİN PANELİ ÖZETİ (yapılanlar + KONTROL 4 revizeleri)",
+      "items": [
+        {
+          "id": "e49b6d4e3e",
+          "t": "İşlem Logları",
+          "u": "http://185.23.72.228/admin/activity-logs",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "5902fcf448",
+          "t": "İşlem Logu görüntüle",
+          "u": "http://185.23.72.228/admin/activity-logs/100",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "4f5effcdd4",
+          "t": "Sistem Ayarları",
+          "u": "http://185.23.72.228/admin/ayarlar",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "243a74b17d",
+          "t": "Hesaplayıcılar",
+          "u": "http://185.23.72.228/admin/calculator-configs",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "3ebbd54384",
+          "t": "Hesaplayıcı düzenle",
+          "u": "http://185.23.72.228/admin/calculator-configs/1/edit",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "ca6f2adbfc",
+          "t": "Hesaplayıcı oluştur",
+          "u": "http://185.23.72.228/admin/calculator-configs/create",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "50bf06ed21",
+          "t": "Sertifika Şablonları",
+          "u": "http://185.23.72.228/admin/certificate-templates",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "86fe2055f9",
+          "t": "Şablon Tasarla: Varsayılan Bağış Sertifikası",
+          "u": "http://185.23.72.228/admin/certificate-templates/1/design",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "56902b7521",
+          "t": "Sertifika Şablonu düzenle",
+          "u": "http://185.23.72.228/admin/certificate-templates/1/edit",
+          "s": "pass",
+          "n": "ÇÖZÜLDÜ (04.09.2026) — Bildirilen beş sorunun tamamı giderildi, ayrıca test sırasında bulunan bir hata daha düzeltildi. (1) GERİ AL: tasarımcıya geri al / yinele eklendi. Araç çubuğunda iki buton var, Ctrl+Z ve Ctrl+Shift+Z (veya Ctrl+Y) da çalışıyor. Her kalıcı değişiklik (ekleme, silme, taşıma, boyutlandırma, metin d…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "58078999da",
+          "t": "Sertifika Şablonu oluştur",
+          "u": "http://185.23.72.228/admin/certificate-templates/create",
+          "s": "pass",
+          "n": "KURAL TANIMLARINDA SORUN YOK PDF LERİN KANALLAR LA GÖNDERİMİ KANALLAR AKTİFLEŞİNCE KONTROL EDİLECEK.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "609f90208c",
+          "t": "İletişim Mesajları",
+          "u": "http://185.23.72.228/admin/contact-messages",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "8123cad385",
+          "t": "İletişim Mesajı görüntüle",
+          "u": "http://185.23.72.228/admin/contact-messages/1",
+          "s": "pass",
+          "n": "HTTP 200 SORUNSUZ ÇALIŞIYOR",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "99ad81ff1f",
+          "t": "Dashboard",
+          "u": "http://185.23.72.228/admin/dashboard",
+          "s": "pass",
+          "n": "HTTP 200 SORUNSUZ ÇALIŞIYOR",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "f2dd170575",
+          "t": "Bağış Kategorileri",
+          "u": "http://185.23.72.228/admin/donation-categories",
+          "s": "pass",
+          "n": "HTTP 200 SORUNSUZ ÇALIŞIYOR",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "c960ab4513",
+          "t": "Bağış Kategorisi düzenle",
+          "u": "http://185.23.72.228/admin/donation-categories/1/edit",
+          "s": "pass",
+          "n": "Geri bildirimde açık kalan iki madde kapatıldı. (2) İKON ÖNİZLEMESİ: listede yalnızca 50 ikon basılıyordu (Choices.js varsayılan sınırı) ve eski kayıtlardaki 'heart', 'education' gibi iç anahtarlar ikon adı olmadığı için seçili değer düz metin görünüyordu. Sınır 400'e çıkarıldı — açılır liste artık 324 ikonun tamamını…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "609bd2740a",
+          "t": "Bağış Kategorisi oluştur",
+          "u": "http://185.23.72.228/admin/donation-categories/create",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "e4fab91c6e",
+          "t": "Bağışlar",
+          "u": "http://185.23.72.228/admin/donations",
+          "s": "pass",
+          "n": "KONTROL EDİLDİ",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "1085da1ff0",
+          "t": "Bağış düzenle",
+          "u": "http://185.23.72.228/admin/donations/34/edit",
+          "s": "pass",
+          "n": "Yönetici notu artık sayfayı submit etmeden ekleniyor. 'Yönetici Notları' bölümüne 'Notu Ekle' butonu (Filament form action) konuldu; buton yalnızca notu kaydeden bir Livewire/AJAX isteği atıyor, form gönderilmiyor. Bağış sayfasındaki 'Kaydet' butonu tamamen kaldırıldı (getFormActions boş döndürülüyor), böylece bağış ka…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "edbe1954d2",
+          "t": "Etkinlikler",
+          "u": "http://185.23.72.228/admin/events",
+          "s": "pass",
+          "n": "ETKİNLİK SONU YAZISI EKLENMESİ BAŞARILI SAYFA TASARIMI İLE ALAKALI REVİZE ARAYÜZ KISMINDA VERİLECEK",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "e5c438804f",
+          "t": "Etkinlik düzenle",
+          "u": "http://185.23.72.228/admin/events/1/edit",
+          "s": "pass",
+          "n": "İki istek de karşılandı. (1) SİTEDE GÖR: Etkinlik düzenleme sayfasının sağ üstünde 'Sitede Gör' butonu var, etkinliğin yayınlandığı sayfayı yeni sekmede açıyor. Kayıt yayında değilse veya o dilde slug'ı yoksa buton gizleniyor, kırık link üretmiyor. Aynı buton listedeki hızlı eylemlere de eklendi. (2) DRAFT/PUBLIC: Etki…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "4614968578",
+          "t": "Etkinlik oluştur",
+          "u": "http://185.23.72.228/admin/events/create",
+          "s": "pass",
+          "n": "SADECE BAŞLANGIÇ VE BİTİŞ AYNI GÜN İSE VEYA SADECE BAŞLANGIÇ GÜNÜ BELİRTİLMİŞSE BİTİŞ SAATİ BAŞLANGIÇ SAATİNDEN ÖNCE OLAMAZ KONTROLÜ EKLENEBİLİR.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "7d52c1e5be",
+          "t": "Senkronizasyon Logları",
+          "u": "http://185.23.72.228/admin/external-sync-logs",
+          "s": "pass",
+          "n": "Çözüldü — otomasyona gönderilecek altyapı kuruldu, yalnızca bağlantının tanımlanması kaldı. HAVALE DOĞRULAMA: App\\Services\\Automation\\BankTransferVerifier yazıldı. Havale ile ödenen bağış 'bekliyor' durumunda açılıyor; 5 saniye arayla en fazla 12 deneme (toplam 1 dakikayı geçmeyecek şekilde) bankaya soruluyor, havale g…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "cc8013d24d",
+          "t": "Hediye Kataloğu",
+          "u": "http://185.23.72.228/admin/gift-catalog-items",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "1be38682ca",
+          "t": "Hediye Kataloğu Öğesi düzenle",
+          "u": "http://185.23.72.228/admin/gift-catalog-items/1/edit",
+          "s": "pass",
+          "n": "Çözüldü. Kaydettikten sonra artık Hediye Kataloğu liste sayfasına dönüyor. Bu davranış tek bir trait ile panelin tamamına uygulandı, 45 oluşturma/düzenleme sayfasında aynı şekilde çalışıyor. ---",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "17d867ccbd",
+          "t": "Hediye Kataloğu Öğesi oluştur",
+          "u": "http://185.23.72.228/admin/gift-catalog-items/create",
+          "s": "pass",
+          "n": "Çözüldü. Kaydettikten sonra artık Hediye Kataloğu liste sayfasına dönüyor. Bu davranış tek bir trait ile panelin tamamına uygulandı, 45 oluşturma/düzenleme sayfasında aynı şekilde çalışıyor. Ayrıca ad üstte / slug altta düzenine geçildi ve slug ad yazıldıkça otomatik üretiliyor.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "10d2225e0a",
+          "t": "Kurban Hizmetleri",
+          "u": "http://185.23.72.228/admin/kurban-campaigns",
+          "s": "pass",
+          "n": "Son kontroldeki maddelerin tamamı yapıldı, yerelde ve sunucuda test edildi. 1. MADDE / KAMPANYA TANIMI: /tr/kampanyalar artık bağış kategorileri içinde \"Kampanya\" etiketi açık olanları (bitiş tarihi belli bağış türlerini) listeliyor; gelişmiş bağış özellikleri (fiyat matrisi) açık olanları DEĞİL. Kampanya etiketi kateg…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "b1739f0cba",
+          "t": "Kurban Hizmeti düzenle",
+          "u": "http://185.23.72.228/admin/kurban-campaigns/1/edit",
+          "s": "pass",
+          "n": "TÜM YENİ REVİZELER BİR ÖNCEKİ CAMPAIGNS KONTROLÜNE EKLENDİ.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "b7285b193d",
+          "t": "Kurban Hizmeti oluştur",
+          "u": "http://185.23.72.228/admin/kurban-campaigns/create",
+          "s": "pass",
+          "n": "HTTP 200 BASARILI",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "c9c16b9148",
+          "t": "Kurban Kesim",
+          "u": "http://185.23.72.228/admin/kurban-orders",
+          "s": "pass",
+          "n": "Sayfa \"Şartlı Bağışlar\" olarak yeniden adlandırıldı (menü, başlık ve kayıt adı). Gelişmiş bağış özellikleri açık kategorilerden gelen şartlı bağışlar burada listeleniyor; sipariş formundaki \"Hayvan Türü\" etiketi de genel \"Tür / Seçenek\" yapıldı. Adres değişmedi (/admin/kurban-orders). TEST: sayfa yerelde ve sunucuda aç…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "2f90de3e33",
+          "t": "Kurban Kesim düzenle",
+          "u": "http://185.23.72.228/admin/kurban-orders/1/edit",
+          "s": "pass",
+          "n": "KONTROL EDİLDİ BEARER TOKEN İLE BİRLİKTE GET REQUEST YAPILARAK VERİLER ÇEKİLDİ SONUÇ BAŞARILI KURBAN SİPARİŞLERİ GİBİ GİBİ BİR KATEGORİ VEYA WEBHOOKA GEREK YOK. BAĞIŞLARIN İÇİNDEN FİLTRELEME YETERLİ",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "3a63bc7a3f",
+          "t": "Diller",
+          "u": "http://185.23.72.228/admin/languages",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "d34ccfaf86",
+          "t": "Canlı Yayınlar",
+          "u": "http://185.23.72.228/admin/live-streams",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı: canlı yayın modülü bu aşamada kapsam dışı bırakıldı ve panel menüsünden kaldırıldı. Hiçbir şey silinmedi — kayıtlar, adresler ve sitedeki canlı yayın sayfaları çalışmaya devam ediyor; modül kapsama alındığında kaynak sınıfındaki tek satırın kaldırılması yeterli. Ayrıca slaytlar/haberler gibi bu…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "250d2f3086",
+          "t": "Canlı Yayın düzenle",
+          "u": "http://185.23.72.228/admin/live-streams/1/edit",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı: canlı yayın modülü menüden kaldırıldı, kayıtlar ve adresler korundu. Ayrıntılar 'Canlı Yayınlar' maddesinde.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "f5e4c14f63",
+          "t": "Canlı Yayın oluştur",
+          "u": "http://185.23.72.228/admin/live-streams/create",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı: canlı yayın modülü menüden kaldırıldı, kayıtlar ve adresler korundu. Ayrıntılar 'Canlı Yayınlar' maddesinde.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "8986bca25b",
+          "t": "Çeviri Yönetimi",
+          "u": "http://185.23.72.228/admin/manage-translations",
+          "s": "pass",
+          "n": "ÇÖZÜLDÜ (04.09.2026) — 'Sitede Gör' bağlantılarının Not Found vermesi giderildi. KÖK NEDEN: bağlantılar rotalardan değil, çeviri anahtarının bulunduğu blade dosyasının yolundan uyduruluyordu; ör. donor/forgot-password.blade.php için '/tr/donor/forgot-password' üretiliyordu ama sayfanın gerçek adresi '/tr/sifremi-unuttu…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "a3e35a72c0",
+          "t": "Medya Galerisi",
+          "u": "http://185.23.72.228/admin/media",
+          "s": "pass",
+          "n": "TEST BAŞARILI - ARAYÜZ REVİZELERİ BÖLÜMÜNDE DAHA DETAYLI TASARIM REVİZELERİ GELEBİLİR",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "35d797a5ef",
+          "t": "Medya düzenle",
+          "u": "http://185.23.72.228/admin/media/11/edit",
+          "s": "pass",
+          "n": "Çözüldü. Medya düzenleme ekranında artık kaynak değiştirilebiliyor: mevcut bir dosya yüklemesi bağlantıya, bağlantı da dosyaya çevrilebiliyor. Bağlantı düzenlendiğinde sağlayıcı ve yön yeniden çözülüyor, 'Tanınan İçerik' satırı güncel bilgiyi gösteriyor. Ayrıca her dil için 'Başlık' alanı eklendi (galeri kartlarında ve…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "8f9104d16d",
+          "t": "Medya oluştur",
+          "u": "http://185.23.72.228/admin/media/create",
+          "s": "pass",
+          "n": "Çözüldü. Medya oluşturma ekranında 'Dosya yükle' ile 'Bağlantı ile ekle (YouTube, Instagram, Vimeo)' seçenekleri var; bağlantı seçildiğinde adres alanı, tanınan içerik önizlemesi ve önizleme görseli adresi alanları açılıyor. Ayrıntılar 'Medya Galerisi' maddesinde.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "8be19b63ef",
+          "t": "Bülten Aboneleri",
+          "u": "http://185.23.72.228/admin/newsletter-subscribers",
+          "s": "pass",
+          "n": "Çözüldü. Bülten Aboneleri listesine 'CSV / Excel İçe Aktar' butonu eklendi. .csv, .xlsx ve .xls destekleniyor; sütun başlıkları Türkçe veya İngilizce olabilir (E-posta/Email/Eposta, Ad/İsim/Name, Dil/Language, Aktif/Active). Yalnızca e-posta zorunlu; dil boşsa formda seçilen varsayılan dil kullanılıyor. Geçersiz e-post…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "a97f75e4b9",
+          "t": "Bülten Abonesi düzenle",
+          "u": "http://185.23.72.228/admin/newsletter-subscribers/1/edit",
+          "s": "pass",
+          "n": "İki istek de karşılandı. (1) KAYIT TARİHİ: artık düzenlenebilir bir alan değil, gizli değer olarak taşınıyor ve yeni abonede sistem tarafından otomatik yazılıyor; ekranda 'Abonelik Geçmişi' satırında yalnızca bilgi olarak gösteriliyor. (2) AYRILMA TARİHİ: elle girilen alan kaldırıldı, yerine 'Aboneliği İptal Et' butonu…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "730bb1964e",
+          "t": "Bülten Abonesi oluştur",
+          "u": "http://185.23.72.228/admin/newsletter-subscribers/create",
+          "s": "pass",
+          "n": "İki istek de karşılandı. (1) KAYIT TARİHİ: düzenlenebilir alan kaldırıldı, gizli değer olarak taşınıyor ve yeni abone oluşturulurken sistem otomatik yazıyor. (2) AYRILMA TARİHİ: elle girilen alan yerine 'Aboneliği İptal Et' butonu kondu; tarih otomatik yazılıyor. Ayrıntı için Bülten Abonesi düzenle maddesine bakınız. -…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "6f9c227f70",
+          "t": "Bildirim Şablonları",
+          "u": "http://185.23.72.228/admin/notification-templates",
+          "s": "pass",
+          "n": "MAİL HTML EMBED BAŞARILI. WHATSAPP VE SMS KANALLARI AKTİFLEŞİNCE KONTROL EDİLECEK",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "bdf3e64dfc",
+          "t": "Bildirim Şablonu düzenle",
+          "u": "http://185.23.72.228/admin/notification-templates/1/edit",
+          "s": "pass",
+          "n": "Bu madde 'Bildirim Şablonları' maddesiyle aynı geri bildirimi taşıyor; üç isteğin tamamı orada anlatıldığı gibi karşılandı. Özet: (1) E-posta artık düz metin değil HTML olarak gönderiliyor (kök neden: Mail::raw); şablonun HTML biçimlendirmesi ve gömülü işaretlemesi alıcıda korunuyor. (2) WhatsApp kanalı seçildiğinde Me…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "a6837006e1",
+          "t": "Bildirim Şablonu oluştur",
+          "u": "http://185.23.72.228/admin/notification-templates/create",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "a2b2e5c603",
+          "t": "Sayfalar",
+          "u": "http://185.23.72.228/admin/pages",
+          "s": "pass",
+          "n": "İki istek de karşılandı. (1) SİTEDE GÖR: sayfa listesinin hızlı eylemler sütununa (en sağa) 'Sitede Gör' butonu eklendi, sayfayı yeni sekmede açıyor; aynı buton düzenleme ekranının sağ üstünde de var. Yayında olmayan veya o dilde slug'ı olmayan kayıtlarda gizleniyor. (2) AD VE SLUG DÜZENLEMEDE: başlık ve slug artık lis…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "30e8c5ecb2",
+          "t": "Sayfa düzenle",
+          "u": "http://185.23.72.228/admin/pages/1/edit",
+          "s": "pass",
+          "n": "Düzenleme ekranlarında tek \"Kaydet\" yerine iki düğme var artık: - KAYDET VE ÇIK (birincil, mavi): kaydeder ve listeye döner. - KAYDET (gri): kaydeder ama sayfada kalır — uzun formlarda ara kayıt için. - İPTAL: değişiklikleri bırakır. Davranış tek bir ortak yerde (RedirectsToIndex) tanımlandığı için yalnız Sayfalar'da d…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "8cd585700b",
+          "t": "Sayfa oluştur",
+          "u": "http://185.23.72.228/admin/pages/create",
+          "s": "pass",
+          "n": "Notlardaki tüm maddeler karşılandı; ayrıntılar 'Sayfa düzenle' maddesinde. Oluşturma ekranında da blok editörü, tüm blok türleri (başlık, paragraf, medya+caption, video, ayraç, satır/sütun, bağış kısa kodu, SSS akordeonu, slider kısa kodu, proje kısa kodu) ve dil sekmeleri mevcut. Kayıt oluşturulduktan sonra düzenleme…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "3c5bf3b839",
+          "t": "Ödemeler",
+          "u": "http://185.23.72.228/admin/payments",
+          "s": "pass",
+          "n": "ÇÖZÜLDÜ (04.09.2026) — Arka planda duran Ödemeler bölümü tamamen kaldırıldı: kaynak sınıfı ve sayfaları silindi, /admin/payments ve /admin/payments/{id}/edit adresleri artık 404 dönüyor. Ödeme bilgileri bağışın kendi detay sayfasındaki 'Ödeme' sekmesinde duruyor — durum, yöntem, sağlayıcı, referans, tarih, geldiği kana…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "4553b7a48e",
+          "t": "Ödeme düzenle",
+          "u": "http://185.23.72.228/admin/payments/37/edit",
+          "s": "pass",
+          "n": "Çözüldü. 'Ödemeler' menüden kaldırıldı; ödeme durumu, sağlayıcı, kanal, IP ve işlem numarası gibi veriler bağışın detay sayfasındaki 'Ödeme' sekmesine taşındı (bkz. Ödemeler maddesi). Ayrı bir ödeme düzenleme ekranına gerek kalmadı.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "31570e69a7",
+          "t": "Haberler",
+          "u": "http://185.23.72.228/admin/posts",
+          "s": "pass",
+          "n": "Taslak ve pasif içerikler artık jetonlu bağlantıyla önizlenebiliyor. Nasıl: Haber (ya da Sayfa/Proje/Etkinlik) yayında değilken, panelde listedeki ve düzenleme ekranındaki buton \"Sitede Gör\" yerine \"TASLAĞI ÖNİZLE\" olur. Buton adresin sonuna kayda özel bir jeton ekler (?onizleme=...). Jeton uygulama anahtarından türeti…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "07529c9812",
+          "t": "Haber düzenle",
+          "u": "http://185.23.72.228/admin/posts/1/edit",
+          "s": "pass",
+          "n": "Doğru anlaşılmayan kısım düzeltildi: kısıtlanan şey yazar SEÇİM LİSTESİDİR. Haber düzenleme ekranındaki \"Yazar\" açılır listesi artık yalnızca yönetici ve editör rolündeki kullanıcıları getiriyor (super_admin, admin, editor). Bağışçılar, gönüllüler ve rolü olmayan kullanıcılar listede hiç çıkmıyor. Maddede \"başarılı\" de…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "0bd0c071b6",
+          "t": "Haber oluştur",
+          "u": "http://185.23.72.228/admin/posts/create",
+          "s": "pass",
+          "n": "Notlardaki tüm maddeler karşılandı; ayrıntılar 'Haber düzenle' maddesinde. Oluşturma ekranında kategori ve etiket seçimi (yerinde oluşturma dahil), blok editörü ve tüm blok türleri — başlıklar, paragraflar, medya (caption'lı), KISA KOD İLE SLIDER EKLEME, SSS akordeonu, Bootstrap mantığında satır/sütun yönetimi ve bağış…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "07baff492a",
+          "t": "Projeler",
+          "u": "http://185.23.72.228/admin/projects",
+          "s": "pass",
+          "n": "İki istek de yapıldı. 1) PROJE LİSTESİNDE \"BAĞIŞ YAP\" ARTIK POPUP AÇIYOR. Proje detayındaki adet/tutar/not bloğu ayrı bir bileşene alındı ve hem detay sayfasında hem de /tr/projeler listesinde aynı form kullanılıyor. Listede \"Bağış Yap\" tıklanınca proje adı ve kategorisiyle bir pop-up açılıyor (arka plan karartma, ESC…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "3741bf93a1",
+          "t": "Proje düzenle",
+          "u": "http://185.23.72.228/admin/projects/1/edit",
+          "s": "pass",
+          "n": "Proje formundaki Bağış Kategorisi seçimi artık aramaya gerek kalmadan TÜM kategorileri listeliyor; alt kategoriler üst kategorileriyle birlikte \"EĞİTİM - BURS\", \"EĞİTİM - OKUL YAPIMI\" biçiminde, istenen hiyerarşik düzende görünüyor (derinlik sınırsız: \"EĞİTİM - OKUL - AKILLI TAHTA\" gibi). Arama kutusu da çalışmaya deva…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "57bc6d6144",
+          "t": "Proje oluştur",
+          "u": "http://185.23.72.228/admin/projects/create",
+          "s": "pass",
+          "n": "İki istek de karşılandı; ayrıntılar 'Proje düzenle' maddesinde. Kayıt oluşturulduktan sonra 'Sitede Gör' butonu ve kısa kod bilgisi düzenleme ekranından kullanılabiliyor. Ad üstte / slug altta düzenine geçildi, slug otomatik üretiliyor ve kayıttan sonra liste sayfasına dönülüyor.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "fd5bac3282",
+          "t": "Raporlama",
+          "u": "http://185.23.72.228/admin/raporlama",
+          "s": "pass",
+          "n": "Geri bildirimdeki iki istek karşılandı. (1) SÜTUN BAŞLIĞINDAN ÇOKLU SÜZGEÇ: Kategori, Proje, Durum ve Para Birimi için tablonun üstünde çok seçimli süzgeçler açıldı; her sütun başlığının yanına küçük bir huni düğmesi kondu ve tıklanınca o sütunun süzgeci açılıp mevcut değerleri liste hâlinde gösteriyor (başlığa tıklama…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "ca7a51fd2a",
+          "t": "Slider",
+          "u": "http://185.23.72.228/admin/sliders",
+          "s": "pass",
+          "n": "GAYET BAŞARILI ŞİMDİ YENİ BAZI REVİZELERLE SON HALİNİ VERİP TASARIM REVİZESİ OLARAK GİRİYORUM ÇALIŞACAĞIM",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "dbb7a7a845",
+          "t": "Slayt düzenle",
+          "u": "http://185.23.72.228/admin/sliders/1/edit",
+          "s": "pass",
+          "n": "BAŞARILI YENİ BİR REVİZE ALTTAKİ SLİDER DOTS BÖLÜMÜNÜN GÖRÜNÜM TERCİHLERİ DEĞİŞEBİLİR MEVCUT HALİ BİR SEÇENEK OLSUN. HEM PASİF HEM HOVER VE AKTİF DE ÖN VE ARKAPLAN RENKLERİ DEĞİŞTİRİLEBİLİR SVG BİR FORMAT OLSUN. BİR DE YUVARLAK VEYA KARE SEÇENEĞİ OLAN THUMB GÖRSEL SLAYT GÖRSELİNDEN DEFAULT ALABİLİR YENİ KÜÇÜK GÖRSEL OL…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "101028f07a",
+          "t": "Slayt oluştur",
+          "u": "http://185.23.72.228/admin/sliders/create",
+          "s": "pass",
+          "n": "Notlardaki tüm maddeler karşılandı; ayrıntılar 'Slayt düzenle' maddesinde. Oluşturma ekranında da çevrilebilir dil sekmeleri, slider paketi seçimi (yerinde paket oluşturma dahil), masaüstü/mobil gösterim anahtarları ve ortama özel görsel/link alanları mevcut.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "3ff1280ab8",
+          "t": "SMS Kampanyaları",
+          "u": "http://185.23.72.228/admin/sms-campaigns",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı ve CRM aktarım altyapısı kuruldu. SMS Kampanyaları bölümü menüden kaldırıldı (kayıtlar ve adresler korundu, kapsama alınırsa tek satırla geri açılır). Pazarlama mesajları CRM üzerinden yürütüleceği ve görüşme kayıtları CRM tarafında tutulacağı için bağışçı profilleri ile bağış kayıtlarının CRM'e…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "2931a6577d",
+          "t": "SMS Kampanya oluştur",
+          "u": "http://185.23.72.228/admin/sms-campaigns/create",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı; SMS kampanyası oluşturma bölümü menüden kaldırıldı. Pazarlama mesajları CRM üzerinden yürütülecek. Bağışçı ve bağış verisinin CRM'e aktarımı için 'CRM Aktarımı' sayfası eklendi — ayrıntılar 'SMS Kampanyaları' maddesinde.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "7f17af943a",
+          "t": "SMS Grupları",
+          "u": "http://185.23.72.228/admin/sms-groups",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "85d2431f4a",
+          "t": "SMS Raporları",
+          "u": "http://185.23.72.228/admin/sms-reports",
+          "s": "pass",
+          "n": "Kapsam kararı uygulandı; SMS raporları bölümü menüden kaldırıldı. Raporlama CRM tarafında yürütülecek. Bağışçı ve bağış verisinin CRM'e aktarımı için 'CRM Aktarımı' sayfası eklendi — ayrıntılar 'SMS Kampanyaları' maddesinde.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "089cf93b67",
+          "t": "Teknik Dokümantasyon",
+          "u": "http://185.23.72.228/admin/technical-docs",
+          "s": "pass",
+          "n": "Çözüldü. Teknik dokümantasyona bu sürümde yapılan tüm değişiklikleri kapsayan yeni bir 'Sürüm Notları (01.09.2026)' bölümü eklendi ve hem /docs listesinin hem panel dokümantasyon sayfasının en üstüne kondu. İçerik: panel geneli davranış değişiklikleri (dile duyarlı otomatik slug, kayıt sonrası yönlendirme, Sitede Gör…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "4d776d7179",
+          "t": "Temalar",
+          "u": "http://185.23.72.228/admin/themes",
+          "s": "pass",
+          "n": "Geri bildirimdeki iki istek karşılandı. (1) DİL KODLARI YERİNE BELİRGİN 'SİTE TERCİHLERİ': üst şeritteki 'TR / TRY' yazısı yerini, kalın yazılmış ve ayrı bir vurgu rengiyle basılan 'Site Tercihleri' bağlantısına bıraktı. Yazı panelden değiştirilebiliyor; boş bırakılırsa eski dil/para birimi kodu görünümüne dönüyor. (2)…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "5e1d7b4442",
+          "t": "Kullanıcılar",
+          "u": "http://185.23.72.228/admin/users",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "feced20eaf",
+          "t": "Kullanıcı düzenle",
+          "u": "http://185.23.72.228/admin/users/3/edit",
+          "s": "pass",
+          "n": "KONTROL EDİLDİ ŞİFRE SIFIRLAMA MAİLİ KENDİ DİLİNDE VE SORUNSUZ ÇALIŞIYOR. TEK SEFERLİK ŞİFRE OLUŞTURULUYOR. TEK SEFERLİK ŞİFRE DEĞİŞMEDEN DİĞER SAYFALARA GEÇEMİYOR. ANCAK TEK SEFERLİK ŞİFRE YENİ ŞİFRE BİLGİLERİYLE BERABER KAYDET E BASINCA KAYDEDİLDİ DİYOR AMA TEK SEFERLİK ŞİFRE KALMAYA DEVAM EDİYOR. YENİ ŞİFRE GÜNCELLE…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "eddf379e05",
+          "t": "Kullanıcı oluştur",
+          "u": "http://185.23.72.228/admin/users/create",
+          "s": "pass",
+          "n": "İki istek de karşılandı. Yeni kullanıcı oluştururken 'Tek kullanımlık şifre' anahtarı varsayılan olarak açık geliyor; kullanıcı ilk girişinde şifresini değiştirmek zorunda. Kayıt oluşturulduktan sonra düzenleme ekranından 'Şifre Sıfırlama Linki Gönder' ve 'Geçici Şifre Üret' butonları kullanılabiliyor. Ayrıntı için Kul…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "e0337b2e4b",
+          "t": "Gönüllü Başvuruları",
+          "u": "http://185.23.72.228/admin/volunteers",
+          "s": "pass",
+          "n": "Gönüllü Başvuruları ekranına dışa aktarma ve içe aktarma eklendi. DIŞA AKTAR: 'CSV Dışa Aktar' butonu, isteğe bağlı durum süzgeciyle (boş bırakılırsa tümü) Excel'de düzgün açılan CSV üretiyor — UTF-8 BOM'lu, noktalı virgül ayraçlı; sütunlar Ad Soyad, E-posta, Telefon, Şehir, Yetenekler (virgülle birleştirilmiş), Mesaj…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "959771c33d",
+          "t": "Gönüllü Başvurusu düzenle",
+          "u": "http://185.23.72.228/admin/volunteers/2/edit",
+          "s": "pass",
+          "n": "Bu maddede uygulanmış bir değişiklik kaydı yok; talep açık durumda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "80a8d14d17",
+          "t": "Gönüllü Başvurusu oluştur",
+          "u": "http://185.23.72.228/admin/volunteers/create",
+          "s": "pass",
+          "n": "Çözüldü. Panelden gönüllü oluşturma tamamen kaldırıldı: /admin/volunteers/create adresi artık 404 dönüyor, listedeki 'Yeni Gönüllü' butonu kaldırıldı ve kaynak seviyesinde oluşturma kapatıldı. Gönüllü kayıtları yalnızca sitedeki başvuru formundan geliyor; iç ekipten biri gönüllü olacaksa aynı formu kullanabiliyor. Mevc…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "e6d627c234",
+          "t": "Zekat Kategorileri",
+          "u": "http://185.23.72.228/admin/zekat-categories",
+          "s": "pass",
+          "n": "HTTP 200 BASARILI",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "0500dea9e7",
+          "t": "Zekat Kategorisi düzenle",
+          "u": "http://185.23.72.228/admin/zekat-categories/1/edit",
+          "s": "pass",
+          "n": "HTTP 200 BASARILI",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "59b08644fe",
+          "t": "Zekat Kategorisi oluştur",
+          "u": "http://185.23.72.228/admin/zekat-categories/create",
+          "s": "pass",
+          "n": "HTTP 200 BASARILI",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtifg95otccpi",
+          "t": "BASLIK URL SLUG MANTIGI",
+          "u": "YOK",
+          "s": "pass",
+          "n": "Başlık-slug mantığı olan TÜM formlarda (Sayfa, Haber, Proje, Etkinlik, Bağış Kategorisi, Hediye Kataloğu, Kampanya/Gelişmiş Bağış Ayarı, Haber Kategorisi, Medya Kategorisi, Canlı Yayın, Etiket ve kampanya içindeki tür/bölge/niyet popup'ları) slug artık yalnız ilk oluşturmada değil, ad/başlık HER DEĞİŞTİĞİNDE aynı kural…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtih1c1h2km14",
+          "t": "KAYIT VEYA EDIT SAYFALARI POST SONRASI DAVRANISI",
+          "u": "YOK",
+          "s": "pass",
+          "n": "RedirectsToIndex trait'i eklendi ve 45 create/edit sayfasına uygulandı. Artık herhangi bir oluşturma veya düzenleme formu kaydedildikten sonra kendi liste sayfasına dönüyor (Filament'in varsayılanı oluşturmada kayıt düzenleme ekranına gitmek, düzenlemede aynı sayfada kalmaktı). Diller kaynağındaki aynı işi yapan tekrar…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtlvbu0svjm1g",
+          "t": "PANELDE OLMAYAN SAYFALARIN ENTEGRASYONU",
+          "u": "YOK",
+          "s": "pass",
+          "n": "Panelde görünmeyen sabit sayfalar 'Sayfalar' bölümüne düzenlenebilir olarak taşındı. KVKK Aydınlatma Metni, Gizlilik Politikası ve Çerez Politikası, şablon dosyalarına gömülü olduğu için panelde hiç görünmüyordu. Yeni 'pages:import-static' komutu her sayfayı kendi adresinden isteyip yazı gövdesini çıkarıyor ve aynı slu…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtlve4msg61ff",
+          "t": "NAVBAR DÜZENLEME",
+          "u": "YOK",
+          "s": "pass",
+          "n": "Üst menü (navbar) panelden yönetilebilir hâle getirildi. Menü şablon dosyasına gömülüydü; artık 'İçerik Yönetimi > Üst Menü (Navbar)' bölümünden düzenleniyor. Her öğede: çevrilebilir menü yazısı, çevrilebilir AÇIKLAMA (açılır menüde başlığın altında küçük punto ile görünür), BAĞLANTI (site içi sayfalar aranarak seçileb…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtlvjaf94nakn",
+          "t": "CANLI YAYIN",
+          "u": "YOK",
+          "s": "pass",
+          "n": "Canlı Yayın modülü panele geri alındı ve aktif/pasif anahtarına bağlandı. Modül menüden tamamen kaldırılmıştı; artık 'Canlı Yayın > Canlı Yayınlar' menüde duruyor ve modül kapalıyken menü öğesinin yanında kırmızı 'Pasif' rozeti çıkıyor (üzerine gelince ne anlama geldiğini açıklıyor). Anahtar: Ayarlar > Sistem Ayarları…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtlvm2nyfjbqy",
+          "t": "EDİTÖR",
+          "u": "YOK",
+          "s": "pass",
+          "n": "Editöre 'Tablo' bloğu eklendi. Paragraf bloğunun zengin metin editörü (Trix) tablo etiketini desteklemediği için tablo ayrı bir blok olarak yapıldı — notta belirtilen 'daha iyi görünüm olacaksa tablo ayrı olabilir' seçeneği. Blok, hem ana içerik alanında hem de 'Satır (Sütunlu Düzen)' bloğunun sütunları içinde kullanıl…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mtlvu533ryo6b",
+          "t": "ÖDEME YÖNTEMİ",
+          "u": "YOK",
+          "s": "pass",
+          "n": "(08.09.2026) — 05.09 çözümü bu sürümde yeniden test edildi: havale sayfası açılıyor, havale kodu üretiliyor, kod ve IBAN kopyalanabiliyor (kopyalama hatası giderildi — Hesap Numaraları satırına bakınız), \"Havaleyi Tamamladım\" öncesi hiç sorgu gitmiyor, banka onayı gelince bağış tamamlanıyor. Ek olarak deneme sayacı ara…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "95640d9ee3",
+          "t": "Kampanya Bilgi Talepleri",
+          "u": "http://185.23.72.228/admin/campaign-info-requests",
+          "s": "pass",
+          "n": "BAŞARILI. SADECE GÖRÜŞME NOTU EKLENEBİLİR.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "f3545f68d8",
+          "t": "Slider Paketleri",
+          "u": "http://185.23.72.228/admin/slider-groups",
+          "s": "pass",
+          "n": "Sliders satırına yazılan revizeler yapıldı: paketteki SVG alanı \"Varsayılan SVG Kodu\" olarak düzenlendi (slayt bazında ezilebilir), nokta sayısı ortamda görünen slayt sayısına uyuyor. Ayrıntı ve testler /admin/sliders satırındaki ÇÖZÜLDÜ (08.09.2026) notunda.",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "c081001c1d",
+          "t": "Hesap Numaraları",
+          "u": "http://185.23.72.228/admin/bank-accounts",
+          "s": "pass",
+          "n": "Altı maddenin tamamı yapıldı. (1) IBAN VE ÖDEME KODU KOPYALAMA DÜZELTİLDİ: Kopyalama, tarayıcının yalnızca https'te çalışan panosuna dayanıyordu; site http üzerinden sunulduğu için sessizce başarısız oluyordu. Her iki sayfaya da (hesap numaraları + havale ekranı) güvenli bağlam gerektirmeyen kopyalama eklendi. TEST: ht…",
+          "kaynak": "Admin Panel - Sayfalar",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mu1c8sasn4sez",
+          "t": "Medya Galerisinden Görsel Seçme",
+          "u": "/",
+          "s": "pending",
+          "n": "1) \"Galeriden Seç\" artık blok görsel alanlarına ek olarak sayfa, haber, bağış kategorisi, proje, etkinlik, hediye paketi, etiket, canlı yayın, kurban hayvan/bölge ve slider görsellerinde de var; yeni eklenen Medya bloğu dahil her alanda sistemdeki yüklü görseller, etiket ve kategori süzgeçleriyle geliyor; 24'erli, aşağ…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nKontrol 4 sonucu: BAŞARILI\n\nKontrol 4 sonucu: BAŞARILI\n\nKontrol 4 sonucu: BAŞARILI\n\nK4.4\n• BUNUN YERİNE MEDYA EKLE POP UP I AÇILDIĞINDA CTRL + V İLE PANODAKİ GÖRSEL UPLOAD OLARAK MEDYA GALERİSİNE EKLENSİN. POP UP DA DA GÜNCEL OLARAK GÖRÜNSÜN VE SEÇİLİ OLSUN.\n• BÖYLECE ŞUAN PANOYA EKLENEREK KAYDEDİLEN GÖRSELLER MEDYA GALERİSİNDE GÖRÜNMÜYOR BU DA ÇÖZÜLMÜŞ OLUR.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 4,
+          "kontrol": 4
+        },
+        {
+          "id": "mu1ce17f7tlyf",
+          "t": "Anasayfa ve Tüm Sayfaları Düzenleme",
+          "u": "/",
+          "s": "pass",
+          "n": "Etkinlik liste ve detay sayfaları ayrıldı: liste /tr/etkinlikler (kartlar), detay /tr/etkinlikler/<slug> (kayıt formu ve yorumlar). Yaklaşan etkinlikler öne çıkan görselleriyle, ilki geniş vitrin kartı olarak listeleniyor. Etiketler liste kartı, geçmiş etkinlikler, detay ve etkinlik bloklarında girildiği gibi yazılıyor…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nK4.1\n• WEB TAMAM. MOBİLDE DE BİR YER HARİÇ TAMAM. MOBİLDE 2 DROPDOWN OLMUŞ MENÜ. NESTED OLUNCA HATA VERMİŞ. DENEME SAYFASINDAKİ İK DROPDOWNDA AKTİF OLMAYAN BLOKLAR GÖRÜNMELİ. ŞUAN 1.DROPDOWN 1.BLOK OLARAK KİLİTLENMİŞ İÇİNDEKİ 2.DROPDOWN DOĞRU ÇALIŞIYOR. ONUN MANTIĞIYLA TEK DROPDOWN İLE İŞ ÇÖZÜLMELİ.\n• 6.2 - BELİRTİLEN GENİŞLİK DEĞERLERİ ŞABLONDA GÖRÜNMÜYOR. SIDEBAR KALINLIĞI ORAN OLARAK DEĞİŞTİRİLEMİYOR. SOLDA VEYA SAĞDA TERCİHİ ÇALIŞIYOR.\n• 6.3 - BU KURAL HATAYA SEBEP OLDU SANIRIM. GÖRSEL BAŞLIK BREADCRUMP VE DİĞER SIDEBAR BLOKLARI SIRALAMASI İÇİN ALTYAPI VAR AMA HATA VERİYOR O ÇALIŞSIN YETERLİ. BİR SIDEBAR BLOĞU ALTA YA DA ÜSTE DRAG EDİLİNCE HATA VERİYOR. KAYDET DİYİNCE KAYDETMEDEN ESKİ HALİNE GELİYOR.\n• 6.4 - ŞABLONDA GÖRSELİN ÜSTÜNE OVERLAY VEYA GRANDYAN EKLEME YOK.\n• 6.5 - BAŞLIK ORTALANIYOR AMA BREADCRUMP ORTALANMIYOR.\n• 6.6 - BREADCRUMP ALT ÜST KENARLIK DURUYOR. INLINE OLMA ÖZELLİĞİ YOK.\n• 6.7 - GÖRSEL - BAŞLIK - BREADCRUMP SIRALAMASI ÇALIŞMIYOR. ZATEN SIRALAMA SADECE BAŞLIK - BREADCRUMP İÇİN OLSUN GÖRSEL HEP ÜSTTE OLSUN AÇIKSA.\n• 6.EK - BAŞLIK VE BREADCRUMP GÖRSELİN İÇİNDE DİYE BİR AÇ KAPA GEREKİYOR.\n• 7-8) Kenar çubuğu parçalarının sırası ve aç/kapa durumu sayfa şablonundan ve sayfa özelinden ayarlanıyor; öne çıkan görsel + başlık + breadcrumb üçlüsü açıksa her zaman diğer modüllerin (hızlı bağış vb.) üstünde.\n• 9) Tasarım Blokları editörü aynı blok oluşturucuyu ve düzen altyapısını kullanıyor; ayarlar senkron.\nSonuç: BAŞARILI\n\nK4.2\n• KOPYA OLARAK KAYDETME VAR. ANCAK SAYFADAKİ BİR BLOĞU TASARIM BLOĞU OLARAK KAYDETME AÇIK DEĞİL.\n• 11) Blok menüsü kaydırmasında blok, menü çubuğunun altındaki alanın dörtte birine (ekran yüksekliğine göre) geliyor; mobilde yapışık şerit de hesaba katılıyor; kaydırma bitince konum yeniden ölçülüp düzeltiliyor, böylece her tıklamada aynı yere geliyor. İstenirse boşluk panelden sabit sayı olarak girilebiliyor.\n• 1-H) Paragraf bloğunun editörü yenilendi: seçilen kelimelere metin rengi ve vurgu rengi verilebiliyor (kalın, italik, altı/üstü çizili, bağlantı, liste, H2/H3, alıntı, biçimi temizle, HTML görünümü de var); başka sayfadan ya da Word'den yapıştırılan metin renk ve stilini koruyor; bloktaki \"Renk\" ayarı yalnız varsayılan metin rengini belirliyor, metin içindeki renkler onu eziyor. Güvenlik: script, iframe, olay öznitelikleri, javascript: bağlantıları ve Word'ün kendi etiketleri ayıklanıyor; stil olarak yalnız renk, zemin rengi, kalınlık, eğiklik, alt çizgi, yazı boyutu ve hizalama kalıyor (editörde, kayıtta ve basılırken).\n• 1-K) Hover ve active artık bloğun ELEMENTİNE de verilebiliyor (başlık, paragraf, metin kutusu span, buton/bağlantı, ikon): hem blok hem element için hover/active arka plan rengi, kenarlık rengi, metin rengi ve arka plan görseli; görsel galeriden seçilebiliyor ya da yüklenip galeriye kaydediliyor. Normal stilin hover'ı ezmesi düzeltildi. 9) Tasarım Blokları (şablon) editörü aynı builder'ı kullandığından bu özelliklerin hepsi orada da çalışıyor ve tek kaynaktan beslendiği için senkron kalıyor.\n• 12) \"Satırlı Sütunlu Düzen\" admin panelinde de ön yüzdeki oranla ızgara görünüyor: 12 birimlik ızgarada 1×3 üç eşit sütun, 2×2 alt alta iki satır ve ikişer sütun, 8+4 → 2/3 + 1/3; genişlik değişince editör anında güncelleniyor.\n• NOT - SATIRLI DÜZENDEKİ BİR BLOK ALT ÜST İÇİN DRAG EDİLEBİLDİĞİ GİBİ SÜTUNA DA DRAGLA TAŞINABİLSİN.\nSonuç: BAŞARILI\n\nK4.3\n• BLOKLAR SÜTUNLARA DRAG EDİLEBİLİR DEĞİL.\n• 1-D) SSS bloğundaki ilk \"Havuzdan Sorular\" seçimi kaldırıldı (eski bloklarda seçili sorular kaybolmasın diye alan yalnız doluyken \"Önceden seçilmiş havuz soruları\" adıyla görünür); filtreli toplu seçme kaldı: açılışta tüm havuz işaretsiz listelenir, arama ya da etiketle yalnız eşleşenler hepsi işaretli gelir, istenmeyenin işareti kaldırılır, \"Ekle\" seçilenleri düzenlenebilir soru olarak kopyalar. Arama büyük/küçük harf ve Türkçe karakter duyarsız, %…% (kelime geçmiyorsa soru gelmez). Aramanın altında SSS etiket grupları soru sayılarıyla; tıklanınca o etiketin soruları gelir. Arama yazma bitince 600 ms sonra tek istekle çalışır, önceki istek iptal edilir ve geç gelen eski yanıt yok sayılır (2 sn beklemeden daha hızlı, aynı derecede kararlı). Uzun listede kaydırınca 20'şerli devamı yüklenir (artık yalnız son sorular değil tüm havuz).\n• 1-D.1 SORU HAVUZU AÇILDIĞINDA SCROLL VE LAZY LOAD İLE TÜM SORULARI GÖRME YOK.\n• 1-D.2 ORTAK TAGLER ÜSTTE YOK. TAGLERLE HAVUZU FİLTRELEME YOK.\n• 1-D.3 %...% MANTIĞINDA CASE INSENSITIVE SEARCH BAŞARILI DEĞİL. ARANAN SONUÇ GELMİYOR.\n• 1-D.4 TEMA'DAKİ TASARIMI UYGULAMAK İÇİN GELEN 2. BİR SSS VAR. O SSS'İN FAYDALI VE YENİ ÖZELLİKLERİNİ ALALIM. 1.YE AKTARALIM. 1.DEKİ HAVUZDAN SEÇME ÖZELLİĞİNİ KORUYUP ÜSTTEKİ REVİZELERE GÖRE STABİL HALE GETİRELİM. SORUNSUZ ÇALIŞTIĞINI ONAYLADIĞIMIZDA YENİ BLOKLA AÇILAN SSS BLOKLARI VARSA ESKİ BLOĞA TANIMLAYALIM AMA ONAY ALDIKTAN SONRA. GÜNÜN SONUNDA TEK BİR SSS BLOĞU KALSIN. HER İKİSİNDE DE İSTENİLEN ÖZELLİKLER KORUNSUN. BLOKLARLA OLUŞTURULAN İÇERİKLER BOZULMASIN.\nSonuç: BAŞARILI\n\nK4.4\n• 1. SSS BLOĞUYLA ALAKALI REVİZELER TAMAM 2. BLOKTA BURAYA ALINMASI GEREKEN ÖZELLİKLER VARSA ALINABİLİR.\n• 1-E) İletişim sayfası ve Form (kısa kod) bloğu iki temada sayfa yenilenmeden gönderiliyor (JS kapalıysa klasik gönderim); başarıda formun yerinde bildirim: kısa kod formlarında formun 4 dilli \"Gönderim Bildirimi\" alanı, İletişim sayfasında Sayfalar → İletişim kaydındaki yeni \"Gönderim bildirimi\" alanı; doğrulama hataları alanın altında. Form Verileri'nde önce form seçiliyor (sekmeler okunmamış sayısıyla), kolonlar seçili formun alanlarından (iletişim formunda ad soyad, e-posta, telefon, konu, mesajın ilk 8 kelimesi); \"gönderen bilgileri\" boş görünme hatası düzeltildi; okunmamışlar açık gri satır + solda turuncu çizgi, görüntülenince okundu olur, toplu \"Okundu / Okunmadı işaretle\" var. İletişim Mesajları listesine de aynı renk ve telefon/mesaj önizlemesi eklendi.\n• 1-F) Özel Tasarım Bloğu sayfaya eklenirken verdiği 500 düzeltildi; Önizle yönetici önizleme adresini yeni sekmede açıyor; Düzenle sayfadan çıkmadan pencere açıyor (Kaydet / Kopya Olarak Kaydet → -1, -2).\nSonuç: BAŞARILI\n\nK4.5\n• HATA GİDERİLMİŞ ANASAYFADAKİ SLIDER VE MODÜLELR BLOKLAR HARİCİ OLAN BLOKLAR ÖZEL TASARIM BLOĞU OLARAK KAYDEDİLİP ANASAYFAYA ÖYLE EKLENMELİYDİ. ANASAYFADAKİ BLOKLAR DÜZENLENEBİLİR DEĞİL. KİLİTLİ BLOKLAR OLARAK GÖRÜNÜYOR. HİÇBİR BLOK KİLİTLİ OLMAMALI. TÜM BLOKLAR ASLINDA SAYFA BLOKLARI İLE EKLENEBİLİR. SLIDER'IN TEMAYA ÖZEL GÖRÜNÜMÜ SLIDER'A AİT KORUNAN BİR GÖRÜNÜM TERCİHİ OLARAK KALABİLİR. VEYA ANASAYFADAKİ HABERLER MODÜLÜNÜN GÖRÜNÜMÜ HABERLER MODÜLÜNE AİT KORUNAN BİR GÖRÜNÜM TERCİHİ OLABİLİR. ETKİNLİKLERDE AYNI ŞEKİLDE. AMA ASLEN SAYFA BLOĞU OLARAK EKLENMESİNE ENGEL BİR DURUM YOK.\n• 1-A: Projeler sayfasına (iki temada) arama + kategori + etiket süzgeç çubuğu eklendi; üçü birlikte çalışıyor. Proje kartlarında etiketler girildiği gibi (Türkçe karakter, boşluk) görünüyor. Bağış kategorilerinde ve projelerde \"Detay sayfası\" aktif sayfalar arasından seçiliyor; /bagis ve /projeler'deki \"Detayı gör\" seçilen sayfaya gidiyor, seçim boşsa kaydın kendi sayfası açılıyor.\n• ***ÖNEMLİ*** YORUM MODÜLÜ HABERLER BÖLÜMÜNDEN OLUŞAN SAYFALARDA DA OLMALI. YORUMLAR BÖLÜMÜNÜNÜN GÖRÜNÜRLÜĞÜ TEMA AYARLARINDA AÇ KAPA YAPILABİLMELİ.\nSonuç: KISMEN BAŞARILI. HARİTA POINTI HARİTAYA GÖMÜLÜ DEĞİL HARİTA HAREKET EDİNCE POINT YERİNDE KALIYOR HATALI.\n\nK4.6\n• ÖNE ÇIKAN GELMİŞ. LİSTELEME BAŞARILI. DETAY SAYFASINDA YORUM YAP FORMU YORUMLARIN ÜSTÜNDE. YORUMLARIN YAZI BOYUTU YORUM YAP FORMUNA GÖRE KÜÇÜKTÜ DEĞİŞMEMİŞ.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 6,
+          "kontrol": 4
+        },
+        {
+          "id": "mu1d5vikd5395",
+          "t": "Fitre ve Zekat Modüler hale gelmesi",
+          "u": "/",
+          "s": "pass",
+          "n": "Sayfa editörüne \"Zekât / Fitre Hesaplayıcı (kısa kod)\" bloğu eklendi. Blok, bir sayfanın sonuna da satır aralarına da konabiliyor; hangi hesaplayıcının geleceği (Zekât / Fitre), başlık, görünüm (çerçeveli kart / sade) ve \"sonuçta bağış butonu görünsün mü\" tercihi blok üzerinde seçiliyor. Bağış butonu tercihi hesaplayıc…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu1dbo1lytbrk",
+          "t": "İletişim Formları ve Özel Formlar",
+          "u": "/",
+          "s": "pass",
+          "n": "Formlar sayfa yenilenmeden gönderiliyor; formun 4 dilli \"Gönderim Bildirimi (teşekkür mesajı)\" gönderimden sonra formun yerinde görünüyor. Form Verileri önce form seçtiriyor, kolonlar o formun alanlarından geliyor, okunmamışlar açık gri satırla ayrılıyor ve görüntülenince okundu oluyor; gönderen bilgilerinin boş görünm…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu1dlyfjhhoim",
+          "t": "Harita İçerik Modülü",
+          "u": "/",
+          "s": "pass",
+          "n": "Harita bloğunda Google Haritalar ilk tercih, OpenStreetMap ikinci tercih; kayıtlı konum / koordinat girişi, etiketleme, iğne rengi ve \"Haritada göster\" bağlantısı aynen çalışıyor. OSM atfı lisans gereği kalıyor. TEST: Google ve OSM blokları iki temada basıldı, iğne rengi uygulandı, Google Haritalar bağlantısı konumu aç…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu1dvedsopcv9",
+          "t": "Websitesi Kimliği Dinamik Olması",
+          "u": "/",
+          "s": "pass",
+          "n": "\"Genel ve Site Kimliği\" sekmesinin başına \"Şu an sitede kullanılan\" önizleme kutusu eklendi: header logosu, footer (koyu zemin) logosu ve favicon kaynaklarıyla (Ayarlar / aktif temanın kaydı / tema paketinin yerleşik logosu) görünüyor. Ayarlarda logo yoksa aktif temanın logo, koyu logo ve favicon dosyaları yükleme alan…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nKontrol 4 sonucu: BAŞARILI",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 1,
+          "kontrol": 4
+        },
+        {
+          "id": "mu1dxjwp7k2yx",
+          "t": "Düzenlenebilir Footer",
+          "u": "/",
+          "s": "pass",
+          "n": "YENİDEN DOĞRULANDI: Footer Düzeni'nde harici adres (https, mailto, tel), hazır ikon ve SVG ikon çalışıyor; Avrasya Pro footer'ında ikonun yazının üstüne düşmesi ve SVG'nin koyu zeminde siyah kalması düzeltildi (ikon solda, zemin rengine uyumlu). TEST: Geçici sütunda https bağlantısı hazır ikonla yeni sekmede, /iletisim…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 3
+        },
+        {
+          "id": "mu5gn44q3d2xd",
+          "t": "Haber Türü Yönetimi",
+          "u": "/",
+          "s": "pass",
+          "n": "İçerik Yönetimi → \"Haber Türleri\" bölümü eklendi. Tür listesi koda gömülüydü; artık panelden yönetiliyor. Her tür için: adı (her dilde), adres/süzgeç parametresini belirleyen anahtar (addan otomatik üretilir), rozet rengi ve aktiflik. Sıralama satırlar sürüklenerek değiştiriliyor. Listede her türün kaç haberde kullanıl…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5gs41saoche",
+          "t": "Admin Paneli Arama Butonu",
+          "u": "/",
+          "s": "pass",
+          "n": "Kök neden: panelin özel tasarımı Filament'in kendi üst çubuğunu gizliyordu, arama bileşeni yalnız o çubukta olduğu için sağ üstteki düğme görünmeyen bir kutuyu tetikliyordu. Arama bileşeni başlığın kendisine taşındı; düğme kutuyu açıp odaklıyor, Ctrl/⌘+K da çalışıyor. ---- ----",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu5gtiwv5kwpw",
+          "t": "Gelişmiş Bağış Özellikleri",
+          "u": "/",
+          "s": "pass",
+          "n": "Dört parça hâlinde yapıldı: (1) ADIM SIRASI — Kampanya (Gelişmiş Bağış Ayarları) ekranına \"Adım Sırası\" seçimi eklendi: \"1) Tür → 2) Bölge\" veya \"1) Bölge → 2) Tür\". Site adım başlıklarını, numaralarını ve açılma sırasını buna göre kuruyor. (2) NİYET KALDIRILDI — Niyet adımı bağış akışından çıkarıldı; hiçbir kampanyada…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5hfhdd42q5t",
+          "t": "Sık Sorulan Sorular",
+          "u": "/",
+          "s": "pass",
+          "n": "İlk \"Havuzdan sorular seçin\" alanı kaldırıldı, filtreli toplu seçme kaldı; arama büyük/küçük harf ve Türkçe karakter duyarsız, %…%; aramanın altında etiket grupları; yazma bitince tek istek, eski istek iptal; uzun listede kaydırınca devamı yükleniyor (tüm havuz). TEST: 61 soruluk havuzda \"KURBAN\", \"kurbânlık\", \"HİSSE\"…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu5huptnfc5f7",
+          "t": "Klonlama Özelliği",
+          "u": "/",
+          "s": "pass",
+          "n": "İlk yüklemede \"Klonla\" düğmesi etiketi veya kategorisi olan kayıtlarda (örneğin Haberler) 500 hatası veriyordu: kopyaya taşınacak etiketler çekilirken veritabanı sorgusunda sütun adı belirsiz kalıyordu (\"Column 'id' in field list is ambiguous\"). Sütun adı tablo adıyla nitelenerek düzeltildi. Aynı incelemede ikinci bir…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5hz21tqqt2x",
+          "t": "Drag Özelliği",
+          "u": "/",
+          "s": "pass",
+          "n": "Sıra numarası taşıyan bölümlerde sürükleyerek sıralama gözden geçirildi; eksik olanlara eklendi. Yeni eklenenler: Hesaplayıcılar, Kampanyalar (Gelişmiş Bağış Ayarları), Projeler, Vekalet Bilgileri (şartlı bağış kaydı içindeki kişi listesi) ve Sertifika Atama Kuralları (öncelik sırası). Zaten açık olanlar korundu: Sayfa…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5i1dv3s6dg2",
+          "t": "Mobil Navbar",
+          "u": "/",
+          "s": "pass",
+          "n": "Mobil çekmece menüsü şablona gömülü sabit bir listeydi; panelden yapılan menü değişiklikleri yalnızca masaüstüne yansıyordu. Artık iki menü de aynı Menü Öğeleri kayıtlarından besleniyor. Mobilde alt öğesi olan bir başlık açılır-kapanır bölüm oluyor; başlığın kendi adresi varsa listenin başına \"<Başlık> — Tümü\" satırı e…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5i2qm86atxf",
+          "t": "Sepet Mantığı",
+          "u": "/",
+          "s": "pass",
+          "n": "Hızlı bağış kutusundan (pencere, alt panel ya da sayfa içi) sepete ekleme sayfa yenilenmeden yapıldığı için üstteki \"Bağışı Tamamla\" düğmesi ve rozetler güncellenmiyordu. Artık sepete ekleme sonucu adet ve toplamı döndürüyor; masaüstü CTA anında \"Bağışı Tamamla (adet)\" oluyor, sepet rozetleri ve mobil alt çubuk aynı an…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5nzinfousbi",
+          "t": "Gelişmiş Bağış Özellikleri / Hisse Mantığı",
+          "u": "/",
+          "s": "pass",
+          "n": "YENİDEN DOĞRULANDI, değişiklik gerekmedi. TEST: Tarayıcıda /tr/bagis/nafile-kurban'da 7 hisselik Büyükbaş seçildi: başta tek satır, tamamlanmadı; Ali 2 + Mehmet 3 → kalan 2; Ayşe 2 eklenince 7/7, \"Hisse adetleri tamamlandı, diğer adıma geçebilirsiniz.\"; sunucu 2+3 gönderimini \"5/7 hisse dağıtıldı\" ile reddetti, 2+3+2'd…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5o8q6d5u81y",
+          "t": "Analytics Entegrasyonu",
+          "u": "/",
+          "s": "pass",
+          "n": "Ayarlar sayfasına \"Analitik\" sekmesi eklendi. Google Analytics kimliği daha önce SEO sekmesinde bir kutu olarak duruyordu ama sitede hiç kullanılmıyordu — yani kod hiçbir zaman sayfaya eklenmiyordu; bu düzeltildi. İçeriği: en üstte \"Takip kodları sitede çalışsın\" ana anahtarı (kapalıyken hiçbir kod sayfaya eklenmiyor…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 1
+        },
+        {
+          "id": "mu5yfj3y1lghl",
+          "t": "Sayfa Bloklari Scroll Özelliği",
+          "u": "/",
+          "s": "pass",
+          "n": "\"Anasayfa ve Tüm Sayfaları Düzenleme\" maddesinin KONTROL2 8 ve 11. alt maddeleri bu özellik için de uygulandı: blok listesi kenar çubuğunun bir parçası, sırası ve açık/kapalı durumu şablondan; masaüstünde kenar çubuğu gerçekten sabit (üst kenar menü çubuğuna, sayfa sonunda footer'a bitişik); mobilde üstte %100 genişlik…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu80qx253h3si",
+          "t": "Route Yönetimi",
+          "u": "/",
+          "s": "pass",
+          "n": "YENİDEN DOĞRULANDI, değişiklik gerekmedi. TEST: /su-kuyusu → 301 /tr/su-kuyusu; /tr/kampanyalar/su-kuyusu → 301 /tr/bagis/su-kuyusu (200); haberler segmenti tr \"kesfet-deneme\", en \"news-test\" yapılınca iki adres 200, menü yeni adresi kullandı, eski /tr/haberler çalışmaya devam etti (ayar geri alındı); /admin/rota-yonet…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nKontrol 4 sonucu: BAŞARILI",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 1,
+          "kontrol": 4
+        },
+        {
+          "id": "mu82xww9p4rde",
+          "t": "Hızlı Bağış",
+          "u": "/",
+          "s": "pass",
+          "n": "Yeni temanın hızlı bağış çekmecesi artık sayfa şablonu ve sayfa ayarındaki hızlı bağış davranışına uyuyor (geriye dönük özelliklerin hepsi korunarak): Standart → çekmece (pop-up) açılır; Özel → seçilen bağışa gidilir (gelişmiş bağışta tür ve bölge parametreleriyle); mobilde ya da masaüstünde kapalı → o ortamda bağış sa…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 2
+        },
+        {
+          "id": "mu839jn4rleos",
+          "t": "Slider Kalan Kontroller",
+          "u": "/",
+          "s": "pass",
+          "n": "Slider paketine \"Görünüm ve Vurgu\" bölümü eklendi. 2) \"Slider altında hızlı bağış şeridi\" anahtarı: Avrasya Pro ana sayfa slider'ının altındaki şerit bununla açılıp kapanıyor. 3) Başlık vurgusu: vurgulanacak kısım başlıkta *yıldız* içine yazılıyor (yıldız yoksa bugünkü gibi); stil alt çizgi (varsayılan) / arka plan / y…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nKontrol 4 sonucu: BAŞARILI\n\nK4.2\n• / ***ÖNEMLİ*** SLİDER'DAKİ NOKTA ETİKETİ KISA YAZI KISMINDAKİ DEĞERLER YENİ TEMANIN SLIDER GÖRÜNÜMÜNDE ALTTAKİ SVG İKONLARIN YANINDA YAZMALI. 2 ADET TITLE VAR SLIDER DA. 2. TITLE A YAZILANLAR GÖRÜNMÜYOR. OLMASI GEREKEN 3 TITLE OLMALI 3Ü DE VARSA GÖRÜNMELİ ALT ALTA. YENİ TEMADAKİ SLIDER'IN ALTI ÇİZİLİ VURGU MANTIĞI ŞU OLMALI. HER SLAYT İÇİN VURGU SATIRI TERCİHİ DROPDOWN. DEFAULT OLARAK 2 OLSUN. 1 2 VE 3 SEÇİLEBİLSİN. SEÇİLENE GÖRE MEVCUTTAKİ ALTTAKİ SARI ÇİZGİ O SATIRA İŞLESİN. ***ÖNEMLİ*** /\n• 4- BAŞARISIZ. - KONTROL 4 - BAŞARILI\n• ÖZEL NOT-REVİZE\n• 1-YENİ TEMA SLIDER'I İLE ADMİN PANELİNDEKİ SLIDER ENTEGRASONU YOK. BAŞLIK 1 - BAŞLIK 2 (ALTI KALIN SARI ÇİZGİLİ) - BAŞLIK 3 - AÇIKLAMA - BUTONLAR - DOTS - DOT'LARIN ÖNE ÇIKAN SVG VE KISA KELİME KODLARI. BU VERİLERİN TAMAMI (BAŞLIK 3 YOK Kİ EKLENMELİ ENTEGRASYON İÇİN) MEVCUT ADMIN PANELİNDEKİ ANASAYFA SLIDER PAKETİNDEKİ VERİLER KULANILARAK UYGULANMALI.\n\nK4.3\n• / ***ÖNEMLİ*** SLİDER'DAKİ NOKTA ETİKETİ KISA YAZI KISMINDAKİ DEĞERLER YENİ TEMANIN SLIDER GÖRÜNÜMÜNDE ALTTAKİ SVG İKONLARIN YANINDA YAZMALI. 2 ADET TITLE VAR SLIDER DA. 2. TITLE A YAZILANLAR GÖRÜNMÜYOR. OLMASI GEREKEN 3 TITLE OLMALI 3Ü DE VARSA GÖRÜNMELİ ALT ALTA. YENİ TEMADAKİ SLIDER'IN ALTI ÇİZİLİ VURGU MANTIĞI ŞU OLMALI. HER SLAYT İÇİN VURGU SATIRI TERCİHİ DROPDOWN. DEFAULT OLARAK 2 OLSUN. 1 2 VE 3 SEÇİLEBİLSİN. SEÇİLENE GÖRE MEVCUTTAKİ ALTTAKİ SARI ÇİZGİ O SATIRA İŞLESİN. ***ÖNEMLİ*** /\n• 2-TEMAYA ÖZEL SLIDER GÖRÜNÜMÜ İSE SLIDER GÖRÜNÜM AYARLARINDA SEÇİLEBİLİR OLMALI. 1. SEÇENEK - STANDART, 2. SEÇENEK - AVRASYA PRO SLIDER ŞEKLİNDE OLABİLİR. YENİ TEMANIN SLIDER KODLAMASI MANTIĞI\n• 2.SEÇENEK AKTİFKEN İŞLER. STANDART SEÇİLİ İSE NORMAL BİR SLIDER OLARAK GÖRÜNÜR.\n• KONRTROL 4 - SLAYTLAR A VERİLEN SVG İKONLAR TEMADAKİ SVG LERİ VE SVG LERİN ANİMASYON KODLARINI ALABİLECEK. YENİ BİR SLAYT İÇİN YENİ SVG ANİMASYON ÜRETİLDİĞİNDE SLAYTA EKLENEBİLECEK.\nSonuç: BAŞARILI",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 3,
+          "kontrol": 2
+        },
+        {
+          "id": "mub67w84tidku",
+          "t": "Sayfa Başı ve Sonu Scroll",
+          "u": "/",
+          "s": "pass",
+          "n": "Yukarı ve aşağı düğmelerinin ortasına \"Önceki konuma dön\" düğmesi eklendi: başa ya da sona basıldığı anki konumu tutar, tıklanınca oraya yumuşak kaydırmayla döner; tutulmuş konum yoksa pasif; panel sayfası değişince sıfırlanır. TEST: /admin/ayarlar'da düğme başta pasif; 1500'de sona basıldı (2796), düğme etkinleşti, ba…\n\n\n---\n\n\nSON VERİLEN KONTROL 4 REVİZELERİ\nKontrol 4 sonucu: BAŞARILI",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 1,
+          "kontrol": 4
+        },
+        {
+          "id": "mupn47c14gb37",
+          "t": "Sayfa Editörü Hata - Ek 1 - TÜM KATMANLARDA BLOKLARA ERİŞİM * ÖNEMLİ",
+          "u": "http://185.23.72.228/admin/pages/27/edit",
+          "s": "pending",
+          "n": "BLOKLARDA POP UP DA AÇILAN BLOKLARIN TAMAMI SATIR SÜTUNLU GÖRÜNÜM BLOĞUNDA SATIRLAR VE SÜTUNLARDA DA EKLENEBİLMELİ.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupn80v9xyxdj",
+          "t": "Sayfa Editörü Hata - Ek 2 / ANASAYFA YAP HABERLER SAYFASI YAP ÖZELLİĞİ * ÖNEMLİ",
+          "u": "http://185.23.72.228/admin/pages/",
+          "s": "pending",
+          "n": "1-MEVCUT SAYFALAR İÇERİSİNDE ANASAYFA ŞU SAYFA OLSUN GİBİ BİR ÖZELLİK YOK. 2-MEVCUT SAYFALAR İÇERİSİNDE HABERLER SAYFASI ŞU SAYFA OLSUN GİBİ BİR ÖZELLİK YOK. BUNUN GİBİ MODÜLLER VARSA SAYFA İÇİNDEN SEÇİLEBİLİR \"X-MODÜLER SAYFAM YAP\" GİBİ BİR DROPDOWNLA SEÇİLEBİLİR.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupncav9jdnci",
+          "t": "Sayfa Editörü Hata - Ek 3 / BLOKLARIN MÜMKÜN OLAN HEPSİNDE BAŞLIK OLMASI * ÖNEMLİ",
+          "u": "http://185.23.72.228/admin/pages/27/edit",
+          "s": "pending",
+          "n": "ŞUAN ANASAYFADA ETKİNLİKLER BÖLÜMÜNDEKİ BAŞLIK VE KISA AÇIKLAMA İÇERİKLERİNİN VE GÖRÜNÜMÜNÜN MODÜLER BLOKLARDA VE TASARIM BLOKLARINDA DA OLMASI. ŞUAN ANASAYFADAKİ BAĞIŞLAR HABERLER VE 8Lİ FAALİYET KARTLARI GİBİ BLOKLARDA BU DEĞİŞKENLER YOK.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupnibvpq6fzl",
+          "t": "Sayfa Editörü Hata - Ek 4 / TASARIM BLOĞU VARYANTLARI İÇİN BUGFIX VE GÖRÜNÜM",
+          "u": "http://185.23.72.228/admin/pages/create",
+          "s": "pending",
+          "n": "Sayfa Blokları Tasarım Varyantlarının Testi İçin Blok Adıyla Taslak Sayfalara Demo İçerik Eklenerek Eksiklerin Tesbiti ŞUAN HERO BLOK TASARIM VARYANTLARI http://185.23.72.228/tr/deneme SAYFASINA EKLENDİ 1. VARYANTTAKİ ÜSTE TAŞAN BLOK ÜSTTEKİ BLOĞU KAPATIYOR. OTOMATİK MARGINLI BİR GÖRÜNÜMLE ÜSTTEKİ BLOĞU ÖRTMEMESİ.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupnmmxdphqim",
+          "t": "Sayfa Editörü Hata - Ek 4 / SLİDER STANDART GÖRÜNÜMÜ HATALI * ÖNEMLİ",
+          "u": "http://185.23.72.228/admin/slider-groups",
+          "s": "pending",
+          "n": "SLIDER GÖRÜNÜMÜ OLARAK TEMADAKİ STANDART SLIDER GÖRÜNÜMÜ HATALI. ÖNCEKİ ÇALIŞMALARDA DETAYLI ÖZELLİKLENDİRDİĞİMİZ ARROW DOTS VS ÇALIŞTIĞIMIZ GÖRÜNÜM STANDART SLIDER GÖRÜNÜMÜ OLARAK TEKRAR DÜZELTİLEBİLİR.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupnpux5z9xhf",
+          "t": "Sayfa Editörü Hata - Ek 5 / EMBEDED ÇALIŞAN ANASAYFADAKİ HABERLER GÖRÜNÜM VARYANTI EKSİK",
+          "u": "http://185.23.72.228/tr",
+          "s": "pending",
+          "n": "ANASAYFADA SOLDA ÖNE ÇIKAN GÖRSELLİ HABER BLOĞU SAĞDA ALT ALTA 3LÜ ÖNE ÇIKAN HABERLER GÖRÜNÜM VARYANTI SAYFA BLOĞUNDA EKSİK. SOLDAKİ VE SAĞDAKİ 3'LÜ HABERLER MANÜEL VEYA FİLTRELİ DE SEÇİLEBİLİR. GÜNCEL VEYA POPÜLER GİBİ FİLTRELERLE DE OTOMATİK GELEBİLİR.",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupnuybkiagk8",
+          "t": "Sayfa Editörü Hata - Ek 6 / HABER-POST GÖRÜNTÜLEME SORT ÖZELLİĞİ VE SAYFADA GÖRÜNÜM TERCİHİ",
+          "u": "http://185.23.72.228/admin/posts/16/edit",
+          "s": "pending",
+          "n": "1- HABER-POST POPÜLERLİK HESAPLAMASI İÇİN GÖRÜNÜM ADETLERİ HEM TUTULMALI HEM DE TASARIMDA BİR YERDE EKLENEBİLİR OLMALI. POSTUN SONUNDAKİ SOSYAL PAYLAŞ BARININ YANINDA OLABİLİR. ÜSTTE BAŞLIK BREADCRUMP GİBİ BİR SEÇENEK OLABİLİR ÜSTTE OLURSA SIRALAMAYA DAHİL OLMALI. 3- YAZAR GÖRÜNÜM TERCİHİ KAPALI İSE AVRASYA VS YAZIYOR…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        },
+        {
+          "id": "mupnzfuhvn0ck",
+          "t": "Sayfa Editörü Hata - Ek 7 / SAYFA ŞABLONU * ÖNEMLİ",
+          "u": "http://185.23.72.228/admin/page-templates/2/edit",
+          "s": "pending",
+          "n": "1- SAYFA ŞABLONLARI GETİRDİKLERİ CSS VE JS LERİ GÖSTERMELİ VE DEĞİŞTİRİLEBİLİR OLMALI. 2- BLANK-BOŞ SAYFA ŞABLONU OLMALI YANİ HEADER VE FOOTER AÇILIP KAPATILABİLİR OLMALI. DİĞER ŞABLONLAR GİBİ CSS/JS ALABİLMELİ. 3- SAYFA ŞABLONU GENİŞLİĞİ PX OLARAK VERİLEBİLİDİĞİ GİBİ COL OLARAK DA VERİLEBİLMELİ. 4- SAYFA CONTENTİ ORTA…",
+          "kaynak": "ADMİN - EK REVİZE",
+          "kontrol4": 0,
+          "kontrol": 0
+        }
+      ]
+    }
+  ]
+}
