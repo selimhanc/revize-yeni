@@ -1,54 +1,52 @@
-# Avrasya Pro — Sistem Özellikleri ve Kontrol Listesi
+# Avrasya Pro — Sistem Özellikleri
 
-Bu depo, Avrasya Pro teması ve yönetim panelinin özellik özetini ve test kontrol
-listesini içerir.
+Avrasya Pro teması ve yönetim panelinin özellik özetini içeren tek sayfalık uygulama.
 
-## 🔒 Giriş şifresi
+## Sayfa
 
-Her iki sayfa da şifreyle korunur:
-
-```
-Avr123
-```
-
-## Sayfalar
+`index.html` tek dosyadır — veri (63 özellik, 7 konu başlığı) HTML içinde gömülüdür.
+Harici dosya, sunucu veya internet bağlantısı gerekmez; dosyayı çift tıklayıp açabilirsiniz.
 
 | Dosya | Açıklama |
 |---|---|
-| `ozellikler.html` | **Sistem Özellikleri** — 7 konu başlığı, 63 özellik. Başlık + durum işareti (✔ tamam / ◐ kısmi) + açılır işlev açıklaması. |
-| `index.html` | **Kontrol Listesi** — test maddeleri, kategoriler, arama, durum süzgeci. |
-| `ozet.html` | Özellikler sayfasının şifresiz, tek dosyalık sürümü (veri HTML içinde gömülü, çevrimdışı çalışır). |
+| `index.html` | **Ana sayfa** — özellik özeti (veri gömülü, çevrimdışı çalışır) |
+| `ozet.html` | `index.html`'in aynı kopyası |
+| `ozellikler.json` | Özellik verisi. "Kaydet" düğmesiyle indirilen güncel dosya. |
+| `admin-ozet.json` | Admin paneli maddelerinin özeti (yapılan / yapılmayan + KONTROL 4 revizeleri) |
+| `data.json` | Kontrol listesi verisi (AES-GCM şifreli) |
 
-## Veri dosyaları
+## Düzenleme
 
-| Dosya | Açıklama |
-|---|---|
-| `ozellikler.json` | Özellik verisi (düz). Güncellemeler "Kaydet" düğmesiyle bu dosyaya yazılır. |
-| `admin-ozet.json` | Admin paneli maddelerinin özeti (yapılan / yapılmayan + KONTROL 4 revizeleri). |
-| `data.json` | Kontrol listesi verisi (AES-GCM şifreli). |
+- **Satır başlığına** tıklayınca özelliğin işlev açıklaması açılır.
+- **⛶** düğmesi (yorum alanının sağ üstünde) yorumu tam ekran düzenler.
+- **✕** (satırın en sağında) özelliği siler — onay ister.
+- Üstteki **Tümünü Aç / Tümünü Kapat** grupları açar/kapatır.
+- Arama kutusuna `💬 Yorumlu` süzgeci yorum yazılmış özellikleri listeler.
 
-## Düzenleme ve kaydetme
+## Kaydetme davranışı
 
-`ozellikler.html` üzerinde:
+Silme ve yorum değişiklikleri **anında kaydedilmez**. Üstteki
 
-- Satır başlığına tıklayınca özelliğin işlev açıklaması açılır.
-- Her özelliğin altında **yorum** alanı vardır; `⛶ Tam ekran` ile geniş pencerede düzenlenir.
-- Satırın sağındaki **✕** ile özellik silinir (onay ister).
-- Silme ve yorum değişiklikleri **anında kaydedilmez**. Üstteki
-  **💾 Kaydet (JSON'a yaz)** düğmesine basıldığında `ozellikler.json` indirilir.
-- Yanlışlıkla silmeye karşı **↺ Son silmeyi geri al** düğmesi vardır.
-- Arama kutusuna `💬 Yorumlu` süzgeci ile yazılı özellikler listelenir.
+```
+💾 Kaydet (JSON'a yaz)
+```
+
+düğmesine basana kadar tarayıcı hafızasında tutulur. Düğmeye basınca:
+
+- silinen özellikler JSON'dan düşer,
+- yorumlar her özelliğin `yorum` alanına yazılır,
+- güncellenmiş `ozellikler.json` dosyası indirilir.
+
+Yanlışlıkla silmeye karşı **↺ Son silmeyi geri al** düğmesi vardır.
+
+Kalıcı yapmak için: indirilen `ozellikler.json` dosyasını gömülü veri olarak
+kopyalayın veya repoya geri yükleyin.
 
 ## Panel
 
 - Adres: <http://185.23.72.228/admin>
 - Kullanıcı: `admin@dernek.test`
 - Şifre: `password`
-
-## Güncelleme
-
-Değişiklikler tarayıcı hafızasında (localStorage) tutulur. Kalıcı olması için
-**Kaydet** ile indirilen `ozellikler.json` dosyasını repoya geri yükleyin.
 
 ## Kaynak
 
